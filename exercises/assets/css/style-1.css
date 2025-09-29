@@ -94,12 +94,20 @@ section > * { max-width: 1600px; margin-left: auto; margin-right: auto }
 
 /* ============= TYPOGRAPHY ============ */
 
+body {
+
+    background-color: antiquewhite; 
+    color: darkred;
+    
+}
+
 h1 {
     font-size: var(--fs-xxxl);
     line-height: 1.2;
     font-family: var(--font-serif);
     font-weight: normal;
     letter-spacing: -3px;
+
 
 }
 
