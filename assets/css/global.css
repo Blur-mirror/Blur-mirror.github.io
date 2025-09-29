@@ -95,7 +95,7 @@ section > * { max-width: 1600px; margin-left: auto; margin-right: auto }
 
 body { 
     
-    background-color: lightgreen; 
+    background-color: rgb(252, 252, 252); 
     color: #4c4c4c;
 
 }
@@ -126,6 +126,6 @@ p {
 }
 
 a { 
-    color: darkgreen; 
+    color: rgb(45, 45, 45); 
 }
 
