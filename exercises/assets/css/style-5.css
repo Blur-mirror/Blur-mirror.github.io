@@ -286,14 +286,16 @@ h1 {
     line-height: 1.1;    
     margin-bottom: 30px;
     text-align: center;
-    letter-spacing: -2px
+    letter-spacing: -2px;
+    font-family: "Oswald", "sans-serif";
 }
 
 header p { 
     font-size: var(--fs-md);
     color: var(--green-900) ;
     text-align: center;
-    font-weight:bold
+    font-weight:bold;
+    font-family: "Lato", "sans-serif";
 }
 
 /* Small headings */
@@ -303,6 +305,7 @@ h2 {
     line-height: 1.2;    
     margin-top: 42px;
     margin-bottom: 4px;
+    font-family: "Oswald", "sans-serif";
 }
 
 section h2:nth-child(1) { margin-top: 0 }
@@ -313,6 +316,7 @@ p {
     color: #000;
     line-height: 1.6;
     margin-bottom: 20px;
+    font-family: "Lato", "sans-serif";
 }
 
 img {
