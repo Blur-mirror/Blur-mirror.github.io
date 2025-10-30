@@ -1,58 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Main index for page</title>
-    <meta name="description" content="Class website for college">
-    <link rel="stylesheet" href="/assets/css/global.css">
+    <meta name="description" content="Class website for college" />
+    <link rel="stylesheet" href="/assets/css/global.css" />
 
+    <link
+      href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css"
+      rel="stylesheet"
+    />
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicons/apple-touch-icon.png">    
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicons/favicon-32x32.png">    
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicons/favicon-16x16.png">    
-    <link rel="manifest" href="/assets/img/favicons/site.webmanifest">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/img/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/img/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/img/favicons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/assets/img/favicons/site.webmanifest" />
 
-    
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7Z1RW40C2F"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-7Z1RW40C2F"
+    ></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-    gtag('config', 'G-7Z1RW40C2F');
+      gtag("config", "G-7Z1RW40C2F");
     </script>
+  </head>
 
-</head>
-
-
-
-<body>
+  <body>
     <section>
+      <h1>This is the main head</h1>
 
-    <h1>This is the main head</h1>
+      <h2>And this is head two</h2>
 
-   
-    
-    
-    <h2>And this is head two</h2>
-    
+      <p>this website is just a test for my front-end class</p>
 
-    <p>this website is just a test for my front-end class</p>
-    
-    <p><a href="/exercises/page-1.html">A Tale of Two Cities</a></p>
-    <p><a href="/exercises/page-2.html">Purple Rain</a></p>
-    <p><a href="/exercises/page-3.html">"Rainbow page"</a></p>
-    <p><a href="/exercises/lighthouse.html">Lighthouse page</a></p>
-    <p><a href="exercises/page-4.html">Vincent van Gogh</a></p> 
-    <p><a href="exercises/page-5.html">Irish Tourism</a></p>
-    <p><a href="exercises/hero-text.html">Hero Block with Text</a></p>
-    <p><a href="exercises/hero-image.html">Hero block with background image</a></p> </section>
+      <p><a href="/exercises/page-1.html">A Tale of Two Cities</a></p>
+      <p><a href="/exercises/page-2.html">Purple Rain</a></p>
+      <p><a href="/exercises/page-3.html">"Rainbow page"</a></p>
+      <p><a href="/exercises/lighthouse.html">Lighthouse page</a></p>
+      <p><a href="exercises/page-4.html">Vincent van Gogh</a></p>
+      <p><a href="exercises/page-5.html">Irish Tourism</a></p>
+      <p><a href="exercises/hero-text.html">Hero Block with Text</a></p>
+      <p>
+        <a href="exercises/hero-image.html">Hero block with background image</a>
+      </p>
+      <p><a href="exercises/hero-video.html">Hero Block with Video</a></p>
+    </section>
 
-
-       
-</body>
-
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"
+      data-cfasync="false"
+    ></script>
+    <script>
+      window.cookieconsent.initialise({
+        palette: {
+          popup: {
+            background: "#000",
+          },
+          button: {
+            background: "#f1d600",
+          },
+        },
+        content: {
+          href: "https://Blur-mirror.github.io /privacy.html", 
+        },
+      });
+    </script>
+  </body>
 </html>
