@@ -1,131 +1,316 @@
 /*  ============= WEB BROWSER RESETS ============ */
-* { margin: 0; padding: 0; border: none }
-*, *::before, *::after { box-sizing: border-box }
-html { height: 100%; font-size: 100%; font: inherit; vertical-align: baseline;
-scroll-behavior: smooth; scroll-padding-top: 20px }
-body { line-height: 1.5; min-height: 100vh }
-img { width: 100%; height: auto }
-@media (max-width: 767px ) { body { text-rendering: optimizeSpeed } }
-@media (min-width: 768px ) { body { text-rendering: optimizeLegibility } }
-
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  scroll-behavior: smooth;
+  scroll-padding-top: 20px;
+}
+body {
+  line-height: 1.5;
+  min-height: 100vh;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 767px) {
+  body {
+    text-rendering: optimizeSpeed;
+  }
+}
+@media (min-width: 768px) {
+  body {
+    text-rendering: optimizeLegibility;
+  }
+}
 
 /* ============ CUSTOM PROPERTIES ============  */
 
 :root {
+  /* Alternatives to default sans-serif font */
+  --font-sans: -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica Neue, Fira Sans, Ubuntu, Oxygen, Oxygen Sans, Cantarell,
+    Droid Sans, Apple Color Emoji, Segoe UI Emoji, Segoe UI Emoji,
+    Segoe UI Symbol, Lucida Grande, Helvetica, Arial, sans-serif;
 
-    /* Alternatives to default sans-serif font */
-    --font-sans: -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Fira Sans, Ubuntu, Oxygen, Oxygen Sans, Cantarell, Droid Sans, Apple Color Emoji, Segoe UI Emoji, Segoe UI Emoji, Segoe UI Symbol, Lucida Grande, Helvetica, Arial, sans-serif;
+  /* Alternatives to default serif font */
+  --font-serif: Cambria, "Hoefler Text", Utopia, "Liberation Serif",
+    "Nimbus Roman No9 L Regular", Times, "Times New Roman", serif;
 
-     /* Alternatives to default serif font */
-    --font-serif: Cambria, "Hoefler Text", Utopia, "Liberation Serif", "Nimbus Roman No9 L Regular", Times, "Times New Roman", serif;
+  /* Alternatives to default monospace font */
+  --font-monospace: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
+    monospace;
 
-     /* Alternatives to default monospace font */
-    --font-monospace: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-
-    /* Fluid font size scale */
-    --fs-sm: clamp(0.8rem, 0.17vi + 0.76rem, 0.89rem);
-    --fs-base: clamp(1rem, 0.34vi + 0.91rem, 1.19rem);
-    --fs-md: clamp(1.25rem, 0.61vi + 1.1rem, 1.58rem);
-    --fs-lg: clamp(1.56rem, 1vi + 1.31rem, 2.11rem);
-    --fs-xl: clamp(1.95rem, 1.56vi + 1.56rem, 2.81rem);
-    --fs-xxl: clamp(2.44rem, 2.38vi + 1.85rem, 3.75rem);
-    --fs-xxxl: clamp(3.05rem, 3.54vi + 2.17rem, 5rem);
-
+  /* Fluid font size scale */
+  --fs-sm: clamp(0.8rem, 0.17vi + 0.76rem, 0.89rem);
+  --fs-base: clamp(1rem, 0.34vi + 0.91rem, 1.19rem);
+  --fs-md: clamp(1.25rem, 0.61vi + 1.1rem, 1.58rem);
+  --fs-lg: clamp(1.56rem, 1vi + 1.31rem, 2.11rem);
+  --fs-xl: clamp(1.95rem, 1.56vi + 1.56rem, 2.81rem);
+  --fs-xxl: clamp(2.44rem, 2.38vi + 1.85rem, 3.75rem);
+  --fs-xxxl: clamp(3.05rem, 3.54vi + 2.17rem, 5rem);
 }
 
 /*  ============== LAYOUT FOR CONTENT CONTAINERS ================= */
 
-nav, header, section, footer { position: relative; display: block }
-header, section, footer { margin-left: auto; margin-right: auto; overflow: hidden }
+nav,
+header,
+section,
+footer {
+  position: relative;
+  display: block;
+}
+header,
+section,
+footer {
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
 /* Under last content item, zero the bottom margin */
-section > *:last-child { margin-bottom: 0 !important }
+section > *:last-child {
+  margin-bottom: 0 !important;
+}
 
 /*  ====================== HEADER ======================== */
 
 /* Padding around content: laptops / desktops  */
 @media (min-width: 768px) {
-    header { 
-        padding-top: 3%; 
-        padding-right: 20%;
-        padding-bottom: 0%;
-        padding-left: 20%
-    }
+  header {
+    padding-top: 3%;
+    padding-right: 20%;
+    padding-bottom: 0%;
+    padding-left: 20%;
+  }
 }
-                        
+
 /* Padding around content: mobiles */
 @media (max-width: 767px) {
-    header { 
-        padding-top: 5%;
-        padding-right: 5%;
-        padding-bottom: 0%;
-        padding-left: 5%
-    }
+  header {
+    padding-top: 5%;
+    padding-right: 5%;
+    padding-bottom: 0%;
+    padding-left: 5%;
+  }
 }
 
 /*  ====================== SECTIONS ======================== */
 
 /* Padding around content: laptops / desktops */
 @media (min-width: 768px) {
-    section { 
-        padding-top: 4%;
-        padding-right: 20%;
-        padding-bottom: 4%;
-        padding-left: 20%
-    }
+  section {
+    padding-top: 4%;
+    padding-right: 20%;
+    padding-bottom: 4%;
+    padding-left: 20%;
+  }
 }
-                        
+
 /* Padding around content: mobiles */
 @media (max-width: 767px) {
-    section { 
-        padding-left: 5%;
-        padding-right: 5%;
-        padding-bottom: 5%;
-        padding-left: 5% }
+  section {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+    padding-left: 5%;
+  }
 }
 
 /* Maximum width of any section */
-section { max-width: 1920px }
+section {
+  max-width: 1920px;
+}
 /* Maximum width for contents of any section */
-section > * { max-width: 1600px }
+section > * {
+  max-width: 1600px;
+}
 
 /* When content width < viewport width, equalise spacing at left and right */
-section > * { max-width: 1600px; margin-left: auto; margin-right: auto }
+section > * {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 /* ============= TYPOGRAPHY ============ */
 
-body { 
-    
-    background-color: rgb(252, 252, 252); 
-    color: #4c4c4c;
-
+body {
+  background-color: rgb(252, 252, 252);
+  color: #4c4c4c;
 }
 
 h1 {
-    font-size: var(--fs-xxxl);
-    line-height: 1.2;
+  font-size: var(--fs-xxxl);
+  line-height: 1.2;
 }
 
 h2 {
-    font-size: var(--fs-xl);
-    line-height: 1.2;
-    margin-top: 42px;
-    margin-bottom: 16px;
+  font-size: var(--fs-xl);
+  line-height: 1.2;
+  margin-top: 42px;
+  margin-bottom: 16px;
 }
 
 h3 {
-    font-size: var(--fs-lg);
-    margin-top: 48px; 
-    margin-bottom: 4px;
-    line-height: 1.2;
+  font-size: var(--fs-lg);
+  margin-top: 48px;
+  margin-bottom: 4px;
+  line-height: 1.2;
 }
 
 p {
-	font-size: var(--fs-base);
-    line-height: 1.7;
-	margin-bottom: 12px;
+  font-size: var(--fs-base);
+  line-height: 1.7;
+  margin-bottom: 12px;
 }
 
-a { 
-    color: rgb(45, 45, 45); 
+a {
+  color: rgb(45, 45, 45);
 }
 
+/* ============= CSS FOR HERO BLOCK (Video) ============= */
+
+header {
+  /* Flexbox to centre child div vertically */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* Spacing around child div inside hero block */
+  padding: 0 20% 4% 20%;
+  /* Optionally, centre child div horizontally */
+  text-align: center;
+  /* Background colour/gradient as fallback */
+  background-color: #2c3e50; /* Dark Blue-Gray fallback */
+  background-image: linear-gradient(
+    90deg,
+    #2c3e50,
+    #4c667f
+  ); /* Cooler/Darker Gradient */
+  position: relative;
+  /* The default header padding from global.css will be overwritten here if it uses an element selector,
+     but since this hero is full-height/width, the centering padding below is what matters.
+     We ensure general header padding from global.css does not interfere with the full-bleed hero. */
+}
+
+/* Set minimum height of hero block */
+@media (min-width: 768px) {
+  header {
+    min-height: 80vh;
+  }
+}
+@media (max-width: 767px) {
+  header {
+    min-height: 500px;
+  }
+}
+
+.hero-text-container h1,
+.hero-text-container h2,
+.hero-text-container h3 {
+  line-height: 1.2;
+  color: #fff;
+}
+
+.hero-text-container h1 {
+  /* Space under h1 and above h2 */
+  margin-bottom: 24px;
+  /* Set main heading to extra large size */
+  font-size: calc(var(--fs-xxxl) * 1.5);
+  /* When text extra large, decrease spacing between characters  */
+  letter-spacing: -4px;
+}
+
+.hero-text-container h2 {
+  /* Optionally, remove default weight of 'bold' from h2 */
+  font-weight: normal;
+  font-size: var(--fs-xl);
+  /* Optionally, change text in h2 to all capital letters */
+  text-transform: uppercase;
+}
+
+.hero-text-container h3 {
+  /* Optionally, remove default weight of 'bold' from h3 */
+  font-weight: normal;
+  font-size: var(--fs-xl);
+}
+
+.slide-in-top {
+  animation: slide-in-top 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slide-in-left {
+  animation: slide-in-left 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation-delay: 1.4s;
+}
+
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.hero-text-container {
+  position: relative;
+  z-index: 2;
+  text-shadow: 2px 2px #222;
+}
+
+.hero-bg-media {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.hero-bg-media * {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.bg-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  /* Updated gradient for a slightly different look */
+  background-image: linear-gradient(
+    rgba(52, 73, 94, 0.8),
+    /* Darker, slightly desaturated blue-grey */ rgba(231, 76, 60, 0.3)
+      /* A subtle red/orange tint */
+  );
+}
+
+/* ======== END CSS FOR HERO BLOCK (Video) ======== */
