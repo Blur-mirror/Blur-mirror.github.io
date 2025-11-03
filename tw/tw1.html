@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hero Block and Content Sections</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      /* Antonio Cruel 75203 */
+
+      /* === Custom Animations === */
+      @keyframes slide-in-top {
+        0% {
+          transform: translateY(-1000px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      @keyframes slide-in-left {
+        0% {
+          transform: translateX(-1000px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+
+      .slide-in-top {
+        animation: slide-in-top 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+      }
+
+      .slide-in-left {
+        animation: slide-in-left 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+        animation-delay: 1.4s;
+      }
+    </style>
+  </head>
+
+  <body class="font-sans text-gray-900">
+    <!-- ===== HERO BLOCK ===== -->
+    <header
+      class="flex flex-col justify-center items-center text-center bg-gradient-to-r from-[#07092f] to-[#242b91] text-white px-[20%] pb-[4%] min-h-[500px] md:min-h-[80vh]"
+    >
+      <div>
+        <h1
+          class="slide-in-top text-[clamp(3.05rem,3.54vi+2.17rem,5rem)] md:text-[calc(clamp(3.05rem,3.54vi+2.17rem,5rem)*1.5)] font-bold leading-tight tracking-[-0.1em] mb-6"
+        >
+          Antonio Cruel
+        </h1>
+        <h2
+          class="slide-in-left text-[clamp(1.95rem,1.56vi+1.56rem,2.81rem)] uppercase font-normal leading-tight"
+        >
+          Tailwind goes brrr
+        </h2>
+      </div>
+    </header>
+
+    <!-- ===== CONTENT SECTIONS ===== -->
+    <!-- Section 1 -->
+    <section class="bg-gray-100 py-10 px-8 lg:px-64">
+      <h2 class="text-4xl lg:text-6xl tracking-tight font-semibold mb-4">
+        Section One
+      </h2>
+      <img
+        src="https://placehold.co/800x400"
+        alt="Placeholder Image"
+        class="w-full h-auto mb-4"
+      />
+      <p class="text-base lg:text-lg mb-4">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora rem
+        pariatur ipsa nihil eveniet, ullam laudantium consequatur cum fugiat
+        doloremque!
+      </p>
+      <p class="text-base lg:text-lg mb-4">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, magni
+        cumque repellendus vitae laboriosam sed doloremque explicabo tempora
+        laudantium.
+      </p>
+    </section>
+
+    <!-- Section 2 -->
+    <section class="bg-blue-100 py-10 px-8 lg:px-64">
+      <h2 class="text-4xl lg:text-6xl tracking-tight font-semibold mb-4">
+        Section Two
+      </h2>
+      <img
+        src="https://placehold.co/800x400"
+        alt="Placeholder Image"
+        class="w-full h-auto mb-4"
+      />
+      <p class="text-base lg:text-lg mb-4">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+        placeat voluptates incidunt alias voluptas quos, laborum repellendus
+        optio repudiandae.
+      </p>
+      <p class="text-base lg:text-lg mb-4">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex aliquam
+        saepe impedit, asperiores nemo earum quis sapiente unde cum.
+      </p>
+    </section>
+
+    <!-- Section 3 -->
+    <section class="bg-green-100 py-10 px-8 lg:px-64">
+      <h2 class="text-4xl lg:text-6xl tracking-tight font-semibold mb-4">
+        Section Three
+      </h2>
+      <img
+        src="https://placehold.co/800x400"
+        alt="Placeholder Image"
+        class="w-full h-auto mb-4"
+      />
+      <p class="text-base lg:text-lg mb-4">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit totam
+        delectus incidunt earum provident dicta, aut quos sed alias.
+      </p>
+      <p class="text-base lg:text-lg mb-4">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum id magni
+        consectetur suscipit voluptatem minus libero omnis excepturi eveniet.
+      </p>
+    </section>
+
+    <!-- Return Link -->
+    <p class="text-center py-6">
+      <a
+        href="../index.html"
+        class="text-blue-700 underline hover:text-blue-900"
+        >Go back to Home page</a
+      >
+    </p>
+  </body>
+</html>
