@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smoothie Delights</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="bg-gray-50">
+    <!-- Header Section -->
+    <header class="relative w-full h-screen lg:h-[85vh] overflow-hidden">
+      <!-- Background Image with multiple fallbacks -->
+      <div class="absolute inset-0 smoothie-bg">
+        <!-- If the main image fails, we'll try these backup images -->
+        <style>
+          @supports (
+            background-image:
+              url("/projects/smoothies/assets/img/smoothies-hero-image.jpg")
+          ) {
+            .smoothie-bg {
+              background-image: url("/projects/smoothies/assets/img/smoothies-hero-image.jpg");
+            }
+          }
+        </style>
+      </div>
+
+      <!-- Overlay for better text readability -->
+      <div class="absolute inset-0 bg-black/40"></div>
+
+      <!-- Content Container -->
+      <div
+        class="relative z-10 flex flex-col items-center justify-center w-full h-full text-center text-white px-4"
+      >
+        <h1 class="text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg">
+          Smoothie Delights
+        </h1>
+        <h2 class="text-xl md:text-2xl font-medium max-w-2xl drop-shadow-md">
+          Fresh, Healthy & Delicious Blends Made Just For You
+        </h2>
+      </div>
+    </header>
+
+    <!-- Components Section -->
+
+    <section class="bg-white dark:bg-gray-900">
+      <div class="container px-6 py-10 mx-auto">
+        <h2
+          class="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white"
+        >
+          Our world-class smoothies are great at any time of the day and offer a
+          tasty alternative to sugary and unhealthy snacks!
+        </h2>
+      </div>
+    </section>
+    <!-- Backup image loader -->
+    <script>
+      // Test if the image loaded properly
+      const testImage = new Image();
+      testImage.src = "/projects/smoothies/assets/img/smoothies-hero-image.jpg";
+
+      testImage.onerror = function () {
+        console.log("Primary image failed to load, using backup...");
+        // Try a different smoothie image
+        document.querySelector(".smoothie-bg").style.backgroundImage =
+          "url('/projects/smoothies/assets/img/smoothies-hero-image-2.jpg')";
+      };
+
+      testImage.onload = function () {
+        console.log("Primary image loaded successfully!");
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>⚡ Tech Meetup 2026 - Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Custom styles can go here if needed, but we'll stick to utility classes */
+      /* Smooth scrolling for anchor links */
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-800">
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+      <nav
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center"
+      >
+        <a
+          href="#"
+          class="text-2xl font-bold text-indigo-600 hover:text-indigo-800 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition duration-150"
+        >
+          TechSync '26
+        </a>
+        <div class="space-x-4">
+          <a
+            href="#schedule"
+            class="text-gray-600 hover:text-indigo-600 font-medium transition duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 rounded px-2 py-1"
+            >Schedule</a
+          >
+          <a
+            href="#speakers"
+            class="text-gray-600 hover:text-indigo-600 font-medium transition duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 rounded px-2 py-1"
+            >Speakers</a
+          >
+          <a
+            href="#location"
+            class="text-gray-600 hover:text-indigo-600 font-medium transition duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 rounded px-2 py-1"
+            >Location</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="hero" class="bg-indigo-700 text-white py-20 md:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight mb-4">
+            Innovate. Connect. Build.
+          </h1>
+          <p class="text-xl md:text-2xl mb-8 opacity-90 max-w-3xl mx-auto">
+            Join us for the largest developer meetup of the year! Deep dives
+            into AI, Web3, and Modern DevOps.
+          </p>
+          <a
+            href="#cta-form"
+            class="inline-block bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 px-8 rounded-lg shadow-xl uppercase tracking-wider transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-pink-400 focus:ring-opacity-75"
+            aria-label="Register Now"
+          >
+            Get Your Free Ticket
+          </a>
+          <p class="mt-4 text-sm opacity-75">
+            November 20th, 2026 | San Francisco, CA
+          </p>
+        </div>
+      </section>
+
+      <section id="schedule" class="py-16 md:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="text-4xl font-bold text-center text-gray-900 mb-12">
+            Event Schedule
+          </h2>
+
+          <div class="grid md:grid-cols-2 gap-10">
+            <div class="space-y-6">
+              <div
+                class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-indigo-500 hover:shadow-xl transition duration-300"
+              >
+                <p class="text-sm font-semibold text-indigo-600">
+                  9:00 AM - 9:30 AM
+                </p>
+                <h3 class="text-xl font-bold mt-1 text-gray-900">
+                  Registration & Coffee
+                </h3>
+                <p class="text-gray-600">Welcome and networking session.</p>
+              </div>
+              <div
+                class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-indigo-500 hover:shadow-xl transition duration-300"
+              >
+                <p class="text-sm font-semibold text-indigo-600">
+                  10:30 AM - 11:30 AM
+                </p>
+                <h3 class="text-xl font-bold mt-1 text-gray-900">
+                  The Future of Serverless Computing
+                </h3>
+                <p class="text-gray-600">
+                  Keynote by Jane Doe, CTO of InnovateCorp.
+                </p>
+              </div>
+              <div
+                class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-indigo-500 hover:shadow-xl transition duration-300"
+              >
+                <p class="text-sm font-semibold text-indigo-600">
+                  1:00 PM - 2:00 PM
+                </p>
+                <h3 class="text-xl font-bold mt-1 text-gray-900">
+                  Hands-on: Building a Real-time API
+                </h3>
+                <p class="text-gray-600">
+                  Workshop on modern API design and testing.
+                </p>
+              </div>
+            </div>
+
+            <div class="space-y-6">
+              <div
+                class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-indigo-500 hover:shadow-xl transition duration-300"
+              >
+                <p class="text-sm font-semibold text-indigo-600">
+                  9:30 AM - 10:30 AM
+                </p>
+                <h3 class="text-xl font-bold mt-1 text-gray-900">
+                  Opening Keynote: AI's Next Decade
+                </h3>
+                <p class="text-gray-600">
+                  Insights from our lead sponsor, Tech Giants Inc.
+                </p>
+              </div>
+              <div
+                class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-indigo-500 hover:shadow-xl transition duration-300"
+              >
+                <p class="text-sm font-semibold text-indigo-600">
+                  11:30 AM - 1:00 PM
+                </p>
+                <h3 class="text-xl font-bold mt-1 text-gray-900">
+                  Lunch Break & Sponsor Booths
+                </h3>
+                <p class="text-gray-600">
+                  Free lunch provided. Visit our sponsors!
+                </p>
+              </div>
+              <div
+                class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-indigo-500 hover:shadow-xl transition duration-300"
+              >
+                <p class="text-sm font-semibold text-indigo-600">
+                  2:00 PM - 3:00 PM
+                </p>
+                <h3 class="text-xl font-bold mt-1 text-gray-900">
+                  Panel: Securing the Decentralized Web
+                </h3>
+                <p class="text-gray-600">
+                  Expert panel discussion on Web3 security.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="speakers" class="bg-gray-100 py-16 md:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="text-4xl font-bold text-center text-gray-900 mb-12">
+            Featured Speakers
+          </h2>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div
+              class="bg-white rounded-lg shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-300 focus-within:ring-4 focus-within:ring-indigo-500"
+            >
+              <img
+                src="https://via.placeholder.com/600x400/818CF8/FFFFFF?text=Speaker+A"
+                alt="Speaker Name"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-gray-900">Alice Johnson</h3>
+                <p class="text-sm font-medium text-indigo-600 mb-2">
+                  Lead AI Scientist
+                </p>
+                <p class="text-gray-600 text-sm">
+                  Expert in natural language processing and transformer models.
+                </p>
+                <a
+                  href="#"
+                  class="block mt-4 text-indigo-500 hover:text-indigo-700 text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded px-1 transition duration-150"
+                  >View Profile →</a
+                >
+              </div>
+            </div>
+
+            <div
+              class="bg-white rounded-lg shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-300 focus-within:ring-4 focus-within:ring-indigo-500"
+            >
+              <img
+                src="https://via.placeholder.com/600x400/818CF8/FFFFFF?text=Speaker+B"
+                alt="Speaker Name"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-gray-900">Ben Carter</h3>
+                <p class="text-sm font-medium text-indigo-600 mb-2">
+                  DevOps Architect
+                </p>
+                <p class="text-gray-600 text-sm">
+                  Specializes in Kubernetes, GitOps, and cloud cost
+                  optimization.
+                </p>
+                <a
+                  href="#"
+                  class="block mt-4 text-indigo-500 hover:text-indigo-700 text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded px-1 transition duration-150"
+                  >View Profile →</a
+                >
+              </div>
+            </div>
+
+            <div
+              class="bg-white rounded-lg shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-300 focus-within:ring-4 focus-within:ring-indigo-500"
+            >
+              <img
+                src="https://via.placeholder.com/600x400/818CF8/FFFFFF?text=Speaker+C"
+                alt="Speaker Name"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-gray-900">Chloe Davis</h3>
+                <p class="text-sm font-medium text-indigo-600 mb-2">
+                  Blockchain Developer
+                </p>
+                <p class="text-gray-600 text-sm">
+                  Passionate about smart contracts and decentralized finance
+                  (DeFi).
+                </p>
+                <a
+                  href="#"
+                  class="block mt-4 text-indigo-500 hover:text-indigo-700 text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded px-1 transition duration-150"
+                  >View Profile →</a
+                >
+              </div>
+            </div>
+
+            <div
+              class="bg-white rounded-lg shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-300 focus-within:ring-4 focus-within:ring-indigo-500"
+            >
+              <img
+                src="https://via.placeholder.com/600x400/818CF8/FFFFFF?text=Speaker+D"
+                alt="Speaker Name"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-gray-900">David Lee</h3>
+                <p class="text-sm font-medium text-indigo-600 mb-2">
+                  Full Stack Engineer
+                </p>
+                <p class="text-gray-600 text-sm">
+                  Focuses on high-performance web applications using modern
+                  JavaScript frameworks.
+                </p>
+                <a
+                  href="#"
+                  class="block mt-4 text-indigo-500 hover:text-indigo-700 text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded px-1 transition duration-150"
+                  >View Profile →</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="cta-form" class="py-16 md:py-20 bg-white">
+        <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">
+            Secure Your Spot!
+          </h2>
+          <p class="text-gray-600 mb-8">
+            Registration is free but spaces are limited. Don't miss out on this
+            incredible opportunity.
+          </p>
+          <form class="space-y-4">
+            <input
+              type="text"
+              placeholder="Full Name"
+              required
+              class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition duration-150"
+            />
+            <input
+              type="email"
+              placeholder="Email Address"
+              required
+              class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition duration-150"
+            />
+            <button
+              type="submit"
+              class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-4 rounded-lg shadow-md uppercase tracking-wider transition duration-200 focus:outline-none focus:ring-4 focus:ring-indigo-400 focus:ring-opacity-75"
+            >
+              Confirm Registration
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8" id="location">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="text-sm mb-4">
+          © 2026 TechSync Meetup. All rights reserved. | Location: 123 Dev
+          Street, San Francisco, CA.
+        </p>
+        <div class="space-x-4">
+          <a
+            href="#"
+            class="text-gray-400 hover:text-indigo-400 transition duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-800 rounded px-1"
+            aria-label="Twitter"
+          >
+            <span class="font-bold">Twitter</span>
+          </a>
+          <a
+            href="#"
+            class="text-gray-400 hover:text-indigo-400 transition duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-800 rounded px-1"
+            aria-label="LinkedIn"
+          >
+            <span class="font-bold">LinkedIn</span>
+          </a>
+          <a
+            href="#"
+            class="text-gray-400 hover:text-indigo-400 transition duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-800 rounded px-1"
+            aria-label="GitHub"
+          >
+            <span class="font-bold">GitHub</span>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
