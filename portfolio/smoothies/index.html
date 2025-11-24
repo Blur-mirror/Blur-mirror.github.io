@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smoothie Delights</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="bg-gray-50">
+    <!-- Header Section -->
+    <header class="relative w-full h-screen lg:h-[85vh] overflow-hidden">
+      <!-- Background Image with multiple fallbacks -->
+      <div class="absolute inset-0 smoothie-bg">
+        <!-- If the main image fails, we'll try these backup images -->
+        <style>
+          @supports (
+            background-image:
+              url("/portfolio/smoothies/assets/img/smoothies-hero-image.jpg")
+          ) {
+            .smoothie-bg {
+              background-image: url("/portfolio/smoothies/assets/img/smoothies-hero-image.jpg");
+            }
+          }
+        </style>
+      </div>
+
+      <!-- Overlay for better text readability -->
+      <div class="absolute inset-0 bg-black/40"></div>
+
+      <!-- Content Container -->
+      <div
+        class="relative z-10 flex flex-col items-center justify-center w-full h-full text-center text-white px-4"
+      >
+        <h1 class="text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg">
+          Smoothie Delights
+        </h1>
+        <h2 class="text-xl md:text-2xl font-medium max-w-2xl drop-shadow-md">
+          Fresh, Healthy & Delicious Blends Made Just For You
+        </h2>
+      </div>
+    </header>
+
+    <!-- Components Section -->
+
+    <section class="bg-white dark:bg-gray-900">
+      <div class="container px-6 py-10 mx-auto">
+        <h2
+          class="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white"
+        >
+          Our world-class smoothies are great at any time of the day and offer a
+          tasty alternative to sugary and unhealthy snacks!
+        </h2>
+      </div>
+    </section>
+    <!-- Backup image loader -->
+
+    <body>
+      <!-- Section 1: Light blue background -->
+      <!-- Padding: default px-6 pt-8 pb-10, md:px-28 md:pt-10 md:pb-12, lg:px-48 lg:pt-12 lg:pb-14, xl:px-72 xl:pt-14 xl:pb-16 -->
+      <section
+        class="bg-blue-50 px-6 pt-8 pb-10 md:px-28 md:pt-10 md:pb-12 lg:px-48 lg:pt-12 lg:pb-14 xl:px-72 xl:pt-14 xl:pb-16"
+      >
+        <!-- H2: text-black font-sans font-semibold tracking-tighter, text-4xl md:text-5xl lg:text-6xl xl:text-7xl, leading-tight md:leading-snug lg:leading-none xl:leading-none, mb-4 lg:mb-6 xl:mb-8 -->
+        <h2
+          class="text-black font-sans font-semibold tracking-tighter text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight md:leading-snug lg:leading-none xl:leading-none mb-4 lg:mb-6 xl:mb-8"
+        >
+          Watermelon Wonder
+        </h2>
+
+        <!-- Placeholder image with same bottom margin as p tag: mb-6 lg:mb-8 -->
+        <img
+          src="https://placehold.co/800x400"
+          alt="Placeholder"
+          class="w-full mb-6 lg:mb-8"
+        />
+
+        <!-- P: text-gray-800 font-serif font-normal text-lg lg:text-2xl leading-relaxed lg:leading-loose xl:leading-10, mb-6 lg:mb-8 -->
+        <p
+          class="text-gray-800 font-serif font-normal text-lg lg:text-2xl leading-relaxed lg:leading-loose xl:leading-10 mb-6 lg:mb-8"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui
+          <a
+            href="#"
+            class="text-blue-600 underline decoration-blue-600 decoration-2 underline-offset-4 hover:text-red-800 hover:no-underline"
+            >officia deserunt mollit</a
+          >
+          anim id est laborum.
+        </p>
+
+        <!-- Final P: Same styling but mb-0 -->
+        <p
+          class="text-gray-800 font-serif font-normal text-lg lg:text-2xl leading-relaxed lg:leading-loose xl:leading-10 mb-0"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui
+          <a
+            href="#"
+            class="text-blue-600 underline decoration-blue-600 decoration-2 underline-offset-4 hover:text-red-800 hover:no-underline"
+            >officia deserunt mollit</a
+          >
+          anim id est laborum.
+        </p>
+      </section>
+
+      <!-- Section 2: Light green background -->
+      <!-- Padding: default px-6 pt-8 pb-10, md:px-28 md:pt-10 md:pb-12, lg:px-48 lg:pt-12 lg:pb-14, xl:px-72 xl:pt-14 xl:pb-16 -->
+      <section
+        class="bg-green-50 px-6 pt-8 pb-10 md:px-28 md:pt-10 md:pb-12 lg:px-48 lg:pt-12 lg:pb-14 xl:px-72 xl:pt-14 xl:pb-16"
+      >
+        <!-- H2: text-black font-sans font-semibold tracking-tighter, text-4xl md:text-5xl lg:text-6xl xl:text-7xl, leading-tight md:leading-snug lg:leading-none xl:leading-none, mb-4 lg:mb-6 xl:mb-8 -->
+        <h2
+          class="text-black font-sans font-semibold tracking-tighter text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight md:leading-snug lg:leading-none xl:leading-none mb-4 lg:mb-6 xl:mb-8"
+        >
+          Section sub-heading
+        </h2>
+
+        <!-- Placeholder image with same bottom margin as p tag: mb-6 lg:mb-8 -->
+        <img
+          src="https://placehold.co/800x400"
+          alt="Placeholder"
+          class="w-full mb-6 lg:mb-8"
+        />
+
+        <!-- P: text-gray-800 font-serif font-normal text-lg lg:text-2xl leading-relaxed lg:leading-loose xl:leading-10, mb-6 lg:mb-8 -->
+        <p
+          class="text-gray-800 font-serif font-normal text-lg lg:text-2xl leading-relaxed lg:leading-loose xl:leading-10 mb-6 lg:mb-8"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui
+          <a
+            href="#"
+            class="text-blue-600 underline decoration-blue-600 decoration-2 underline-offset-4 hover:text-red-800 hover:no-underline"
+            >officia deserunt mollit</a
+          >
+          anim id est laborum.
+        </p>
+
+        <!-- Final P: Same styling but mb-0 -->
+        <p
+          class="text-gray-800 font-serif font-normal text-lg lg:text-2xl leading-relaxed lg:leading-loose xl:leading-10 mb-0"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui
+          <a
+            href="#"
+            class="text-blue-600 underline decoration-blue-600 decoration-2 underline-offset-4 hover:text-red-800 hover:no-underline"
+            >officia deserunt mollit</a
+          >
+          anim id est laborum.
+        </p>
+      </section>
+
+      <!-- Section 3: Light yellow background -->
+      <!-- Padding: default px-6 pt-8 pb-10, md:px-28 md:pt-10 md:pb-12, lg:px-48 lg:pt-12 lg:pb-14, xl:px-72 xl:pt-14 xl:pb-16 -->
+      <section
+        class="bg-yellow-50 px-6 pt-8 pb-10 md:px-28 md:pt-10 md:pb-12 lg:px-48 lg:pt-12 lg:pb-14 xl:px-72 xl:pt-14 xl:pb-16"
+      >
+        <!-- H2: text-black font-sans font-semibold tracking-tighter, text-4xl md:text-5xl lg:text-6xl xl:text-7xl, leading-tight md:leading-snug lg:leading-none xl:leading-none, mb-4 lg:mb-6 xl:mb-8 -->
+        <h2
+          class="text-black font-sans font-semibold tracking-tighter text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight md:leading-snug lg:leading-none xl:leading-none mb-4 lg:mb-6 xl:mb-8"
+        >
+          Section sub-heading
+        </h2>
+
+        <!-- Placeholder image with same bottom margin as p tag: mb-6 lg:mb-8 -->
+        <img
+          src="https://placehold.co/800x400"
+          alt="Placeholder"
+          class="w-full mb-6 lg:mb-8"
+        />
+
+        <!-- P: text-gray-800 font-serif font-normal text-lg lg:text-2xl leading-relaxed lg:leading-loose xl:leading-10, mb-6 lg:mb-8 -->
+        <p
+          class="text-gray-800 font-serif font-normal text-lg lg:text-2xl leading-relaxed lg:leading-loose xl:leading-10 mb-6 lg:mb-8"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui
+          <a
+            href="#"
+            class="text-blue-600 underline decoration-blue-600 decoration-2 underline-offset-4 hover:text-red-800 hover:no-underline"
+            >officia deserunt mollit</a
+          >
+          anim id est laborum.
+        </p>
+
+        <!-- Final P: Same styling but mb-0 -->
+        <p
+          class="text-gray-800 font-serif font-normal text-lg lg:text-2xl leading-relaxed lg:leading-loose xl:leading-10 mb-0"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui
+          <a
+            href="#"
+            class="text-blue-600 underline decoration-blue-600 decoration-2 underline-offset-4 hover:text-red-800 hover:no-underline"
+            >officia deserunt mollit</a
+          >
+          anim id est laborum.
+        </p>
+      </section>
+    </body>
+
+    <script>
+      // Test if the image loaded properly
+      const testImage = new Image();
+      testImage.src =
+        "/portfolio/smoothies/assets/img/smoothies-hero-image.jpg";
+
+      testImage.onerror = function () {
+        console.log("Primary image failed to load, using backup...");
+        // Try a different smoothie image
+        document.querySelector(".smoothie-bg").style.backgroundImage =
+          "url('/portfolio/smoothies/assets/img/smoothies-hero-image.jpg')";
+      };
+
+      testImage.onload = function () {
+        console.log("Primary image loaded successfully!");
+      };
+    </script>
+  </body>
+</html>

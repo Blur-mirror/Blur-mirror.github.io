@@ -1,121 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- Antonio Cruel 75203 -->
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Main index for page</title>
-    <meta name="description" content="Class website for college" />
-    <link rel="stylesheet" href="/assets/css/global.css" />
+    <title>Antonio | Web Designer and Developer</title>
+    <meta
+      name="description"
+      content="I bring cool ideas to life and make them useful!"
+    />
 
+    <!-- Preload large image -->
+
+    <!-- Stylesheets -->
     <link
-      href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css"
       rel="stylesheet"
+      href="https://lunevedy.com/assets/2.0/css/lunevedy.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/custom.css" />
+
+    <!-- Google Fonts -->
+
+    <!-- Font Awesome 6 icons. Delete if not using. -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
 
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/assets/img/favicons/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/assets/img/favicons/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/assets/img/favicons/favicon-16x16.png"
-    />
-    <link rel="manifest" href="/assets/img/favicons/site.webmanifest" />
-
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-7Z1RW40C2F"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
+    <style>
+      header .col-text h2 {
+        line-height: 1.8;
       }
-      gtag("js", new Date());
-
-      gtag("config", "G-7Z1RW40C2F");
-    </script>
+      .col-1 > h3 {
+        line-height: 1.8;
+      }
+    </style>
   </head>
 
   <body>
-    <header>
-      <div class="hero-text-container">
-        <h1 class="slide-in-top">Welcome to My Class Website</h1>
-        <h2 class="slide-in-left">Front-End Development Showcase</h2>
-        <h3 class="slide-in-left">By Antonio Cruel - 75203</h3>
-      </div>
-
-      <div class="hero-bg-media">
-        <video
-          loop
-          playsinline
-          muted
-          autoplay
-          poster="assets/videos/hero-still-main.jpg"
-          class="background-video"
-          disablepictureinpicture
-          preload="auto"
-        >
-          <source
-            src="/exercises/assets/videos/Personal-video.MOV"
-            type="video/mp4"
+    <!-- menu and 'hero block' header -->
+    <nav class="theme-dark">
+      <div class="container-menu">
+        <a href="#" class="brand">
+          <img
+            src="assets/img/website-logo-sample.png"
+            alt="Sample website logo"
           />
-          <!-- So, i missed the last class so i couldnt record a video of my classmates! so i recorded a nice part of my accomodation-->
-        </video>
+        </a>
+
+        <div class="container-menu-links">
+          <div class="nav-toggle" id="nav-toggle-btn">
+            <div class="bar-1"></div>
+            <div class="bar-2"></div>
+            <div class="bar-3"></div>
+          </div>
+
+          <ul class="links-wrapper">
+            <li><a href="#">Home</a></li>
+            <li><a href="portfolio/index.html">Portfolio</a></li>
+            <li><a href="store/index.html">Store</a></li>
+            <li>
+              <a
+                class="btn btn-solid btn-soft"
+                id="btn-cta"
+                href="contact/index.html"
+                ><span>Contact</span> <i class="fa-regular fa-envelope"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- header starts here -->
+
+    <header class="theme-dark cols-2-half text-center-mobile">
+      <div class="col-2 col-text">
+        <div class="badge">WELCOME</div>
+        <h1>Antonio Cruel</h1>
+        <h2>
+          I like things that work well and look nice. I do front-end web
+          development
+        </h2>
+
+        <div class="container-btn">
+          <a href="portfolio/index.html" class="btn btn-solid btn-soft"
+            ><span>View my work</span
+            ><i class="fa-regular fa-folder-open"></i></a
+          ><a href="contact/index.html" class="btn btn-outline btn-soft"
+            ><span>Get in touch</span><i class="fa-regular fa-envelope"></i
+          ></a>
+        </div>
       </div>
 
-      <div class="bg-overlay"></div>
+      <div class="col-2 col-visual">
+        <figure>
+          <img
+            src="https://lunevedy.com/ui/assets/img/1024x618-shopping-bag.jpg"
+            alt="Placeholder image"
+          />
+        </figure>
+      </div>
     </header>
-    <section>
-      <h1>This is the main head</h1>
-      <h2>And this is head two</h2>
 
-      <p>this website is just a test for my front-end class</p>
+    <!-- header ends here -->
 
-      <p><a href="/exercises/page-1.html">A Tale of Two Cities</a></p>
-      <p><a href="/exercises/page-2.html">Purple Rain</a></p>
-      <p><a href="/exercises/page-3.html">"Rainbow page"</a></p>
-      <p><a href="/exercises/lighthouse.html">Lighthouse page</a></p>
-      <p><a href="exercises/page-4.html">Vincent van Gogh</a></p>
-      <p><a href="exercises/page-5.html">Irish Tourism</a></p>
-      <p><a href="exercises/hero-text.html">Hero Block with Text</a></p>
-      <p>
-        <a href="exercises/hero-image.html">Hero block with background image</a>
-      </p>
-      <p><a href="exercises/hero-video.html">Hero Block with Video</a></p>
-      <p><a href="tw/tw1.html">Tailwind Hero Block</a></p>
-      <p><a href="tw/tw2.html">Tailwind Content Sections</a></p>
-    </section>
+    <!-- main content with sections -->
+    <main>
+      <!-- section starts here -->
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"
-      data-cfasync="false"
-    ></script>
-    <script>
-      window.cookieconsent.initialise({
-        palette: {
-          popup: {
-            background: "#000",
-          },
-          button: {
-            background: "#f1d600",
-          },
-        },
-        content: {
-          href: "https://Blur-mirror.github.io/Privacy.html", //fixed link to privacy page
-        },
-      });
-    </script>
+      <section class="theme-dark section-selector-1 w-1356px">
+        <div class="col-1 text-center w-820px">
+          <h2>Recent projects</h2>
+          <h3>
+            Below you can see some examples of my recent work. Check out my
+            complete portfolio of
+            <a href="portfolio/index.html">web design</a> projects. Have a
+            project you would like to discuss?
+            <a href="contact/index.html"
+              >Let's make something great together!</a
+            >
+          </h3>
+        </div>
+
+        <!-- Begin three-column flexbox grid -->
+        <div class="flex-cols-3 cols-gap-4">
+          <div class="col-3">
+            <figure
+              class="photos-zoom photos-brightness"
+              style="overflow: hidden"
+            >
+              <a href="portfolio/fashion/index.html"
+                ><img
+                  src="assets/img/project-fashion.jpg"
+                  alt="Fashion retailer project"
+              /></a>
+            </figure>
+            <h3>Snazzy Fashion</h3>
+            <p>
+              A web page for a fashion retailer with a background video that
+              plays in a continuous loop.
+            </p>
+            <a
+              href="portfolio/fashion/index.html"
+              class="btn btn-solid btn-soft"
+              ><span>View project</span><i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+
+          <div class="col-3">
+            <figure
+              class="photos-zoom photos-brightness"
+              style="overflow: hidden"
+            >
+              <a href="portfolio/smoothies/index.html"
+                ><img
+                  src="assets/img/project-smoothie.jpg"
+                  alt="Placeholder image"
+              /></a>
+            </figure>
+            <h3>Smooth Smoothies</h3>
+            <p>
+              A multi-column, flexbox-based page layout and hero image with a
+              tinted overlay.
+            </p>
+            <a
+              href="portfolio/smoothies/index.html"
+              class="btn btn-solid btn-soft"
+              ><span>View project</span><i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+
+          <div class="col-3">
+            <figure
+              class="photos-zoom photos-brightness"
+              style="overflow: hidden"
+            >
+              <a href="portfolio/crypto-wallet/index.html"
+                ><img
+                  src="assets/img/project-crypto-wallet.jpg"
+                  alt="Placeholder image"
+              /></a>
+            </figure>
+            <h3>Crypto Wallet</h3>
+            <p>
+              A dark-themed responsive single-page website for a fictitious
+              crypto wallet.
+            </p>
+            <a
+              href="portfolio/crypto-wallet/index.html"
+              class="btn btn-solid btn-soft"
+              ><span>View project</span><i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+        <!-- End three-column flexbox grid -->
+      </section>
+
+      <!-- section ends here -->
+    </main>
+
+    <!-- footer -->
+
+    <footer class="theme-dark text-center-desktop text-center-mobile">
+      <h2>Antonio Cruel</h2>
+
+      <h3>Front-end designer and developer</h3>
+
+      <ul class="footer-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="portfolio/index.html">Portfolio</a></li>
+        <li><a href="store/index.html">Store</a></li>
+        <li><a href="contact/index.html">Contact</a></li>
+      </ul>
+
+      <ul class="footer-icons">
+        <li>
+          <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </li>
+        <li>
+          <a href="#" target="_blank"><i class="fab fa-github-square"></i></a>
+        </li>
+      </ul>
+
+      <p class="privacy"><a href="privacy.html">Privacy &amp; Legal</a></p>
+    </footer>
+
+    <script src="https://lunevedy.com/assets/js/lunevedy.js"></script>
   </body>
 </html>
