@@ -1,5 +1,13 @@
 /* Add your custom CSS here */
 
+body {
+  font-family: "Playfair Display", serif;
+}
+
+header h1 {
+  font-size: var(--font-size-xxxl);
+}
+
 .section-selector-1 {
   background-color: var(--green-800);
 }
@@ -19,5 +27,16 @@ header {
   background-color: var(--green-800);
 }
 .section-selector-4 div[class^="flex-cols-"] div[class^="col-"] figure.icon {
+  color: var(--white-000);
+}
+
+.theme-dark.section-selector-1 a:link,
+.theme-dark.section-selector-1 a:visited {
+  color: var(--green-200);
+}
+
+.theme-dark.section-selector-1 a:focus,
+.theme-dark.section-selector-1 a:hover,
+.theme-dark.section-selector-1 a:active {
   color: var(--white-000);
 }
