@@ -27,8 +27,8 @@ header .col-text h2,
 .gradient-text {
   background: linear-gradient(
     to right,
-    var(--rose-400),
-    /* Start color */ var(--purple-600) /* End color */
+    #00c6ff,
+    /* Start color */ #00ffc2 /* End color */
   );
 
   /* Clip the background to the text's shape */
@@ -37,4 +37,9 @@ header .col-text h2,
 
   /* Make the text transparent so the background shows */
   color: transparent;
+}
+
+nav .brand img {
+  height: 150px; /* Adjust this number to fit your preference */
+  width: auto; /* Keep the aspect ratio correct */
 }
