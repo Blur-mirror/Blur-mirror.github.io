@@ -1,4 +1,6 @@
 /*  ============= WEB BROWSER RESETS ============ */
+/* Antonio Cruel 75203*/
+
 * {
   margin: 0;
   padding: 0;
@@ -203,7 +205,6 @@ header {
      but since this hero is full-height/width, the centering padding below is what matters.
      We ensure general header padding from global.css does not interfere with the full-bleed hero. */
 }
-
 
 /* Set minimum height of hero block */
 @media (min-width: 768px) {

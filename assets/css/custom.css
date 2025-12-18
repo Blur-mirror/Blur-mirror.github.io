@@ -1,3 +1,5 @@
+/* Antonio Cruel 75203*/
+
 nav.theme-dark,
 nav.theme-dark ul.links-wrapper.active {
   background-color: #0e121c;
@@ -62,3 +64,4 @@ footer a:hover {
   padding: 2px 6px; /* Adds a little space around the text for the highlight */
   border-radius: 4px; /* Rounds the corners of the highlight */
 }
+
