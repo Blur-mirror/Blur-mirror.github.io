@@ -1,6 +1,6 @@
 nav.theme-dark,
 nav.theme-dark ul.links-wrapper.active {
-  background-color: #0f172a;
+  background-color: #0e121c;
 }
 
 header.theme-dark {
@@ -16,7 +16,7 @@ section.theme-dark {
 }
 
 footer.theme-dark {
-  background-color: #0f172a;
+  background-color: #000000;
 }
 
 header .col-text h2,
@@ -28,7 +28,7 @@ header .col-text h2,
   background: linear-gradient(
     to right,
     #00c6ff,
-    /* Start color */ #00ffc2 /* End color */
+    /* Start color */ #15ff00 /* End color */
   );
 
   /* Clip the background to the text's shape */
@@ -42,4 +42,23 @@ header .col-text h2,
 nav .brand img {
   height: 150px; /* Adjust this number to fit your preference */
   width: auto; /* Keep the aspect ratio correct */
+}
+
+.img-small {
+  max-width: 450px;
+}
+.img-medium {
+  max-width: 450px;
+}
+
+/* 1. Target all links (hrefs) inside the main text areas */
+
+/* 2. The Highlight effect on Hover */
+header a:hover,
+section a:hover,
+footer a:hover {
+  color: #ffffff; /* Change text color to white on hover */
+  /* The green "highlight" background */
+  padding: 2px 6px; /* Adds a little space around the text for the highlight */
+  border-radius: 4px; /* Rounds the corners of the highlight */
 }

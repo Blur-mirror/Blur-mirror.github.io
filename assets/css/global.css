@@ -204,6 +204,7 @@ header {
      We ensure general header padding from global.css does not interfere with the full-bleed hero. */
 }
 
+
 /* Set minimum height of hero block */
 @media (min-width: 768px) {
   header {
