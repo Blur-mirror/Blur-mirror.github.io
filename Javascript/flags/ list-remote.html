@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>REST Countries & Pokémon API</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      .country-card {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 4px;
+      }
+      #remote-data-container p {
+        line-height: 1.5;
+      }
+      /* Updated styling for the Pokémon filter */
+      section#filter-pokemon {
+        max-width: 500px;
+        margin: 20px 0;
+        padding: 22px 32px;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        display: none; /* Hidden by default */
+      }
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+      }
+
+      .form-group label {
+        font-weight: bold;
+        margin-bottom: 6px;
+        color: #333;
+      }
+
+      .form-group input[type="text"] {
+        padding: 10px 12px;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        outline: none;
+        max-width: 320px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>API Tutorial: Countries & Monsters</h1>
+
+    <div id="button-container">
+      <button class="btn" id="btn-countries">Load Countries</button>
+      <button class="btn" id="btn-users">Load Users</button>
+      <button class="btn" id="btn-nintendo">Load Pocket Monsters</button>
+    </div>
+    <section
+      id="filter-countries"
+      style="
+        display: none;
+        max-width: 500px;
+        margin: 20px 0;
+        padding: 22px 32px;
+        background-color: #eef2f7;
+        border: 1px solid #ccd;
+        border-radius: 8px;
+      "
+    >
+      <h2>Search Countries</h2>
+      <div class="form-group">
+        <label for="countrySearch">Search by name:</label>
+        <input
+          type="text"
+          id="countrySearch"
+          placeholder="e.g. Italy, France..."
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="regionSelect">Filter by Continent:</label>
+        <select id="regionSelect">
+          <option value="all">All Continents</option>
+          <option value="africa">Africa</option>
+          <option value="americas">Americas</option>
+          <option value="asia">Asia</option>
+          <option value="europe">Europe</option>
+          <option value="oceania">Oceania</option>
+        </select>
+      </div>
+    </section>
+
+    <section id="filter-pokemon">
+      <h2>Search Pokedex</h2>
+      <div class="form-group">
+        <label for="pokemonSearch">Enter exact Pokémon name:</label>
+        <input
+          type="text"
+          id="pokemonSearch"
+          placeholder="e.g., pikachu, ditto"
+        />
+      </div>
+    </section>
+
+    <div
+      id="remote-data-container"
+      style="
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+        margin-top: 20px;
+      "
+    ></div>
+    <script src="list-remote.js" defer></script>
+  </body>
+</html>

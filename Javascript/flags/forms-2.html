@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f2f5;
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        text-align: center;
+        margin-top: 40px;
+        color: #333;
+      }
+
+      .label-above {
+        max-width: 480px;
+        margin: 40px auto;
+        padding: 32px;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+      }
+
+      /* Each label/input pair */
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+      }
+
+      /* Labels above their fields */
+      .form-group label {
+        font-weight: bold;
+        margin-bottom: 6px;
+        color: #333;
+      }
+
+      /* Input fields */
+      .form-group input,
+      .form-group select {
+        padding: 10px 12px;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        outline: none;
+        transition: border-color 0.2s ease;
+      }
+
+      .form-group input:focus,
+      .form-group select:focus {
+        border-color: #007bff;
+      }
+
+      /* Submit button */
+      button[type="submit"] {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        font-size: 1rem;
+        font-weight: bold;
+        color: #fff;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+      }
+
+      button[type="submit"]:hover {
+        background-color: #0056b3;
+      }
+
+      p#output {
+        text-align: center;
+        margin: 12px auto 0 auto;
+        font-size: 18px;
+        color: #333;
+        background-color: lightgreen;
+        border: solid 1px green;
+        border-radius: 5px;
+        padding: 12px;
+        max-width: 480px;
+        display: none;
+      }
+    </style>
+    <h1>Contact Form</h1>
+
+    <form id="contactForm" class="label-above">
+      <div class="form-group">
+        <label for="fullName">Full name</label>
+        <input
+          type="text"
+          id="fullName"
+          name="fullName"
+          placeholder="e.g. Alex Murphy"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="reason">Reason for contacting</label>
+        <select id="reason" name="reason" required>
+          <option value="">-- Choose one --</option>
+          <option value="support">Support</option>
+          <option value="sales">Sales</option>
+          <option value="feedback">Feedback</option>
+        </select>
+      </div>
+
+      <button type="submit">Send</button>
+    </form>
+
+    <p id="output"></p>
+
+    <script>
+      const contactForm = document.getElementById("contactForm");
+      const output = document.getElementById("output");
+
+      contactForm.addEventListener("submit", (e) => {
+        // prevents the default form submission behaviour (page reload)
+        e.preventDefault();
+        // Gets the values from the form
+        const fullName = document.getElementById("fullName").value.trim();
+        const reason = document.getElementById("reason").value;
+        // Unhides the output element and displays the message
+        output.style.display = "block";
+        output.innerText = `Thanks, ${fullName}. Your reason: ${reason}.`;
+        contactForm.style.display = "none";
+      });
+      // ✅ Reset the form every time the page loads/reloads
+      window.addEventListener("load", () => {
+        contactForm.reset();
+        output.style.display = "none";
+        output.innerText = "";
+      });
+    </script>
+  </body>
+</html>
