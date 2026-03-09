@@ -1,327 +1,275 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>75203 | Web Designer and Developer</title>
-    <meta
-      name="description"
-      content="I bring cool ideas to life and make them useful!"
-    />
-
-    <!-- Preload large image -->
-
-    <!-- Stylesheets -->
-
-    <link
-      href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css"
-      rel="stylesheet"
-    />
+    <title>75203 | Antonio Cruel</title>
 
     <link
       rel="stylesheet"
       href="https://lunevedy.com/assets/2.0/css/lunevedy.min.css"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@700;800&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="assets/css/custom.css" />
-
-    <!-- Google Fonts -->
-
-    <!-- Font Awesome 6 icons. Delete if not using. -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
     />
-
-    <style>
-      header .col-text h2 {
-        line-height: 1.8;
-      }
-      .col-1 > h3 {
-        line-height: 1.8;
-      }
-    </style>
-
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="assets/img/favicons/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="assets/img/favicons/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="assets/img/favicons/favicon-16x16.png"
-    />
-    <link rel="manifest" href="assets/img/favicons/site.webmanifest" />
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=YOUR_GA_ID"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "YOUR_GA_ID"); // Replace YOUR_GA_ID with your actual UA- or G- code
-    </script>
-
-    <script type="text/javascript">
-      (function () {
-        window.__insp = window.__insp || [];
-        __insp.push(["wid", 563961093]);
-        var ldinsp = function () {
-          if (typeof window.__inspld != "undefined") return;
-          window.__inspld = true;
-          var insp = document.createElement("script");
-          insp.type = "text/javascript";
-          insp.async = true;
-          insp.id = "inspsync";
-          insp.src =
-            ("https:" == document.location.protocol ? "https" : "http") +
-            "://cdn.inspectlet.com/inspectlet.js?wid=" +
-            563961093 + // THIS ONE IS ALREADY CORRECT
-            "&r=" +
-            Math.floor(new Date().getTime() / 3600000);
-          var x = document.getElementsByTagName("script")[0];
-          x.parentNode.insertBefore(insp, x);
-        };
-        setTimeout(ldinsp, 0);
-      })();
-    </script>
+    <link rel="stylesheet" href="assets/css/custom.css" />
   </head>
 
   <body>
-    <!-- menu and 'hero block' header -->
     <nav class="theme-dark">
       <div class="container-menu">
-        <a href="#" class="brand">
-          <img src="assets/img/logo.png" alt="Sample website logo" />
-        </a>
-
-        <div class="container-menu-links">
-          <div class="nav-toggle" id="nav-toggle-btn">
-            <div class="bar-1"></div>
-            <div class="bar-2"></div>
-            <div class="bar-3"></div>
-          </div>
-
-          <ul class="links-wrapper">
-            <li><a href="#">Home</a></li>
-            <li><a href="portfolio/index.html">Portfolio</a></li>
-            <li><a href="store/index.html">Store</a></li>
-            <li><a href="../privacy.html">Privacy</a></li>
-            <li>
-              <a
-                class="btn btn-solid btn-soft"
-                id="btn-cta"
-                href="contact/index.html"
-                ><span>Contact</span> <i class="fa-regular fa-envelope"></i
-              ></a>
-            </li>
-          </ul>
-        </div>
+        <a href="#" class="brand"
+          ><img src="assets/img/logo.png" alt="Logo"
+        /></a>
+        <ul class="links-wrapper">
+          <li><a href="#">Home</a></li>
+          <li><a href="portfolio/index.html">Portfolio</a></li>
+          <li>
+            <a
+              class="btn btn-solid btn-soft"
+              id="btn-cta"
+              href="../contact/index.html"
+              ><span>Contact</span> <i class="fa-regular fa-envelope"></i
+            ></a>
+          </li>
+        </ul>
       </div>
     </nav>
 
-    <!-- header starts here -->
-
-    <header class="theme-dark cols-2-half text-center-mobile">
-      <div class="col-2 col-text">
-        <div class="badge">WELCOME</div>
+    <header class="theme-dark modern-hero">
+      <div class="col-text">
+        <div class="badge">DESIGNER + DEVELOPER</div>
         <h1><span class="gradient-text">Antonio Cruel</span></h1>
         <h2>
-          I like things that work well and look nice. I do front-end web
-          development
+          I build digital products with a focus on clean code and elegant UI.
         </h2>
-
         <div class="container-btn">
-          <a href="portfolio/index.html" class="btn btn-solid btn-soft"
-            ><span>View my work</span
-            ><i class="fa-regular fa-folder-open"></i></a
-          ><a href="contact/index.html" class="btn btn-outline btn-soft"
-            ><span>Get in touch</span><i class="fa-regular fa-envelope"></i
-          ></a>
+          <a href="./portfolio/index.html" class="btn btn-solid btn-soft"
+            >View Work</a
+          >
         </div>
       </div>
-
-      <div class="col-2 col-visual">
-        <figure>
-          <img
-            src="assets/img/sampl-2.png.png"
-            alt="Placeholder image"
-            class="img-small"
-          />
-        </figure>
-      </div>
+      <div class="col-visual"></div>
     </header>
 
-    <!-- header ends here -->
-
-    <!-- main content with sections -->
     <main>
-      <!-- section starts here -->
-
-      <section class="theme-dark section-selector-1 w-1356px">
-        <div class="col-1 text-center w-820px">
-          <h2>Recent projects</h2>
-          <h3>
-            Below you can see some examples of my recent work. Check out my
-            complete portfolio of
-            <a href="portfolio/index.html">web design</a> projects. Have a
-            project you would like to discuss?
-            <a href="contact/index.html"
-              >Let's make something great together!</a
-            >
-          </h3>
-        </div>
-
-        <!-- Begin three-column flexbox grid -->
-        <div class="flex-cols-3 cols-gap-4">
-          <div class="col-3">
-            <figure
-              class="photos-zoom photos-brightness"
-              style="overflow: hidden"
-            >
-              <a href="portfolio/fashion/index.html"
-                ><img
-                  src="assets/img/project-fashion.jpg"
-                  alt="Fashion retailer project"
-              /></a>
-            </figure>
-            <h3>Snazzy Fashion</h3>
-            <p>
-              A web page for a fashion retailer with a background video that
-              plays in a continuous loop.
-            </p>
-            <a
-              href="portfolio/fashion/index.html"
-              class="btn btn-solid btn-soft"
-              ><span>View project</span><i class="fas fa-arrow-right"></i
-            ></a>
+      <section class="split-personality">
+        <div class="split-container">
+          <div class="personality-side designer-list">
+            <h3>Part <span class="text-designer">Designer</span></h3>
+            <ul class="cringe-list">
+              <li>UI/UX Design</li>
+              <li>Quality of Life Features</li>
+              <li>Design Systems</li>
+              <li>Interactive Design</li>
+            </ul>
           </div>
 
-          <div class="col-3">
-            <figure
-              class="photos-zoom photos-brightness"
-              style="overflow: hidden"
-            >
-              <a href="portfolio/smoothies/index.html"
-                ><img
-                  src="assets/img/project-smoothie.jpg"
-                  alt="Placeholder image"
-              /></a>
-            </figure>
-            <h3>Smooth Smoothies</h3>
-            <p>
-              A multi-column, flexbox-based page layout and hero image with a
-              tinted overlay.
-            </p>
-            <a
-              href="portfolio/smoothies/index.html"
-              class="btn btn-solid btn-soft"
-              ><span>View project</span><i class="fas fa-arrow-right"></i
-            ></a>
+          <div class="personality-core">
+            <div class="pie-chart-wrapper">
+              <svg viewBox="0 0 100 100" class="pie-chart">
+                <circle cx="50" cy="50" r="50" class="pie-base coder-pie" />
+
+                <circle
+                  cx="50"
+                  cy="50"
+                  r="50"
+                  class="pie-slice designer-slice"
+                />
+              </svg>
+            </div>
           </div>
 
-          <div class="col-3">
-            <figure
-              class="photos-zoom photos-brightness"
-              style="overflow: hidden"
-            >
-              <a href="portfolio/crypto-wallet/index.html"
-                ><img
-                  src="assets/img/project-crypto-wallet.jpg"
-                  alt="Placeholder image"
-              /></a>
-            </figure>
-            <h3>Crypto Wallet</h3>
-            <p>
-              A dark-themed responsive single-page website for a fictitious
-              crypto wallet.
-            </p>
-            <a
-              href="portfolio/crypto-wallet/index.html"
-              class="btn btn-solid btn-soft"
-              ><span>View project</span><i class="fas fa-arrow-right"></i
-            ></a>
+          <div class="personality-side coder-list">
+            <h3>Part <span class="text-coder">Coder</span></h3>
+            <ul class="cringe-list">
+              <li>Front-end development</li>
+              <li>Backend Development</li>
+              <li>C, C#, Python, Java</li>
+              <li>JavaScript (almost)</li>
+              <li>Virtualization Systems</li>
+            </ul>
           </div>
         </div>
-        <!-- End three-column flexbox grid -->
       </section>
 
-      <!-- section ends here -->
+      <section class="theme-dark">
+        <div
+          class="container"
+          style="max-width: 1000px; margin: 0 auto; padding: 80px 20px"
+        >
+          <h2
+            style="
+              text-align: center;
+              margin-bottom: 40px;
+              font-family: &quot;JetBrains Mono&quot;;
+            "
+          >
+            My Expertise
+          </h2>
+          <div
+            class="flex-cols-2"
+            style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px"
+          >
+            <div class="skill-group">
+              <h3 class="skill-title designer-title">Visual Design</h3>
+              <div class="skill-item">
+                <div class="skill-label">
+                  <span>UI/UX Design</span> <span>90%</span>
+                </div>
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-fill fill-designer"
+                    style="width: 90%"
+                  ></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-label">
+                  <span>Figma</span> <span>85%</span>
+                </div>
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-fill fill-designer"
+                    style="width: 85%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-group">
+              <h3 class="skill-title coder-title">Technical Skill</h3>
+              <div class="skill-item">
+                <div class="skill-label">
+                  <span>Frontend Dev</span> <span>95%</span>
+                </div>
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-fill fill-coder"
+                    style="width: 95%"
+                  ></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-label">
+                  <span>JavaScript</span> <span>80%</span>
+                </div>
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-fill fill-coder"
+                    style="width: 80%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="theme-dark" style="padding: 100px 0">
+        <div
+          class="container"
+          style="max-width: 1100px; margin: 0 auto; padding: 0 20px"
+        >
+          <h2
+            style="
+              font-family: &quot;JetBrains Mono&quot;;
+              color: var(--accent-coder);
+            "
+          >
+            // Do you know?
+          </h2>
+          <div class="facts-grid">
+            <div class="fact-card">
+              <i class="fa-solid fa-mug-hot"></i>
+              <p>
+                You might think I made a typo, but wrong! If you think you're
+                cool and wanna help me with some projects join my github and
+                send me a message, I don't bite :D
+              </p>
+            </div>
+            <div class="fact-card">
+              <i class="fa-solid fa-ghost"></i>
+              <p>
+                Do you guys think Coke Zero is labeled healthy just because it
+                hasn't been long enough for people to get sick, and studies
+                can't prove anything yet?
+              </p>
+            </div>
+            <div class="fact-card">
+              <i class="fa-solid fa-code-branch"></i>
+              <p>
+                I've spent more time in this site than any other complex project
+                I made :D
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="theme-dark" style="padding-bottom: 100px">
+        <div
+          class="container"
+          style="max-width: 800px; margin: 0 auto; padding: 0 20px"
+        >
+          <h2
+            style="
+              text-align: center;
+              font-family: &quot;JetBrains Mono&quot;;
+              color: var(--text-dim);
+            "
+          >
+            // Skill Distribution
+          </h2>
+          <div class="graph-container">
+            <div class="column-wrapper">
+              <div class="bar color-1" style="height: 95%"></div>
+              <div class="bar-label">Frontend</div>
+            </div>
+
+            <div class="column-wrapper">
+              <div class="bar color-2" style="height: 85%"></div>
+              <div class="bar-label">UI Design</div>
+            </div>
+
+            <div class="column-wrapper">
+              <div class="bar color-3" style="height: 75%"></div>
+              <div class="bar-label">Backend</div>
+            </div>
+
+            <div class="column-wrapper">
+              <div class="bar color-4" style="height: 80%"></div>
+              <div class="bar-label">Python</div>
+            </div>
+
+            <div class="column-wrapper">
+              <div class="bar color-5" style="height: 90%"></div>
+              <div class="bar-label">Systems</div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <!-- footer -->
-
-    <footer class="theme-dark text-center-desktop text-center-mobile">
+    <footer class="theme-dark">
       <h2>Antonio Cruel</h2>
-
-      <h3>Front-end designer and developer</h3>
-
-      <ul class="footer-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="portfolio/index.html">Portfolio</a></li>
-        <li><a href="store/index.html">Store</a></li>
-        <li><a href="contact/index.html">Contact</a></li>
-      </ul>
-
       <ul class="footer-icons">
         <li>
-          <a
-            href="https://www.linkedin.com/in/antonio-c-8b2a29234/"
-            target="_blank"
-            ><i class="fab fa-linkedin"></i
-          ></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
         </li>
         <li>
-          <a href="https://github.com/Blur-mirror" target="_blank"
-            ><i class="fab fa-github-square"></i
-          ></a>
+          <a href="#"><i class="fab fa-github"></i></a>
         </li>
       </ul>
-
-      <p class="privacy"><a href="privacy.html">Privacy &amp; Legal</a></p>
+      <p class="privacy"><a href="privacy.html">Privacy & Legal</a></p>
     </footer>
 
     <script src="https://lunevedy.com/assets/js/lunevedy.js"></script>
-
-    <!-- JavaScript for Cookie Consent Popup Message -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"
-      data-cfasync="false"
-    ></script>
-    <script>
-      window.cookieconsent.initialise({
-        palette: {
-          popup: {
-            background: "#000",
-          },
-          button: {
-            background: "#f1d600",
-          },
-        },
-        content: {
-          href: "https://Blur-mirror.github.io/privacy.html",
-        },
-      });
-    </script>
   </body>
 </html>
