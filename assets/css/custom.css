@@ -842,3 +842,68 @@ mn-wrapper:nth-child(1) .bar-label {
     opacity: 1;
   }
 }
+
+/* --- MOBILE RESPONSIVENESS (PHONES) --- */
+
+@media (max-width: 768px) {
+  /* 1. Stack the Split Personality Section */
+  .split-container {
+    flex-direction: column !important;
+    gap: 50px;
+    padding: 0 20px;
+  }
+
+  /* 2. Fix the Lists (Remove right/left alignment) */
+  .designer-list,
+  .coder-list {
+    text-align: center !important;
+    padding: 0 !important;
+    width: 100%;
+  }
+
+  .designer-list h3,
+  .coder-list h3 {
+    font-size: 1.8rem;
+  }
+
+  .cringe-list {
+    display: inline-block; /* Keeps the list centered but left-aligned text */
+    text-align: left;
+    margin: 0 auto;
+  }
+
+  /* 3. Scale down the Pie Chart for small screens */
+  .personality-core {
+    width: 260px;
+    height: 260px;
+    order: -1; /* Puts the Pie Chart at the TOP of the stack */
+    margin-bottom: 20px;
+  }
+
+  /* 4. The Skills Graph (Crucial Fix) */
+  .graph-container {
+    height: 250px; /* Shorter for mobile */
+    gap: 10px; /* Tighter spacing */
+    padding: 0 10px;
+  }
+
+  .bar {
+    width: 35px; /* Thinner bars so they all fit */
+  }
+
+  .bar-label {
+    font-size: 0.7rem; /* Tiny text to prevent overlapping */
+    transform: rotate(-45deg); /* Rotate labels so they don't collide */
+    margin-top: 25px;
+    transform-origin: top left;
+  }
+
+  /* 5. Adjust Hero Text */
+  .gradient-text {
+    font-size: 3rem !important; /* Prevents name from breaking lines weirdly */
+  }
+
+  .modern-hero h2 {
+    font-size: 1.2rem;
+  }
+}
