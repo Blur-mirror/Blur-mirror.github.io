@@ -502,40 +502,38 @@ nav.theme-dark .links-wrapper #btn-cta:hover {
   box-shadow: 0 5px 15px rgba(181, 185, 255, 0.4);
 }
 
-/* --- 7. MOBILE RESPONSIVENESS (PHONES ONLY) --- */
+/* --- MOBILE MENU ANIMATION --- */
 @media (max-width: 768px) {
-  .split-container,
-  .container-cta {
+  .split-container {
+    flex-direction: column !important;
+    gap: 40px;
+  }
+
+  /* Center the text for mobile readability */
+  .personality-side {
+    text-align: center !important;
+    padding: 0 20px !important;
+  }
+
+  .cringe-list {
+    text-align: center !important;
+    display: flex;
     flex-direction: column;
-    text-align: center;
+    align-items: center;
   }
 
-  .designer-list,
-  .coder-list {
-    padding: 0;
-    text-align: center;
-  }
-
-  .gradient-text {
-    font-size: 3rem;
-  }
-
-  .cta-visual-decoration,
+  /* Hide the pie chart on very small screens if it's too big */
   .personality-core {
-    order: -1;
-    margin-bottom: 30px;
+    width: 200px !important;
+    height: 200px !important;
+    margin: 0 auto;
   }
 
-  .bar {
-    width: 30px;
-  }
-  .bar-label {
-    font-size: 0.7rem;
-    transform: rotate(-45deg);
-    transform-origin: top left;
+  /* Flip the order of the Portfolio section so image is on top */
+  .container-cta {
+    flex-direction: column-reverse !important;
   }
 }
-
 /* --- CONTACT PAGE OVERRIDES (GLOBAL) --- */
 .contact-subtext {
   font-size: 1.25rem !important;
@@ -704,4 +702,68 @@ header.theme-dark h2 a {
 .section-selector-1 a.btn:hover {
   background-color: #ffffff !important;
   box-shadow: 0 0 15px rgba(181, 185, 255, 0.4);
+}
+
+@media (max-width: 768px) {
+  .links-wrapper {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: var(--bg-offset);
+    border-bottom: 1px solid var(--border);
+    padding: 20px;
+  }
+
+  .links-wrapper.active {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+    cursor: pointer;
+  }
+}
+/* Show links when 'active' class is added via JS */
+.links-wrapper.active {
+  display: flex !important;
+}
+
+/* Force the hamburger to be visible */
+.nav-toggle {
+  display: block !important;
+  cursor: pointer;
+}
+
+.nav-toggle div {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px;
+  transition: 0.3s;
+}
+
+/* Animation for the X shape when menu is open */
+.nav-toggle.open .bar-1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.nav-toggle.open .bar-2 {
+  opacity: 0;
+}
+.nav-toggle.open .bar-3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Hide hamburger on desktop */
+.nav-toggle {
+  margin-left: auto;
+  z-index: 1100;
+}
+nav.theme-dark {
+  position: relative;
+}
+.links-wrapper {
+  z-index: 2000;
 }
