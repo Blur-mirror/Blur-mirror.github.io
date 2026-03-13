@@ -768,3 +768,20 @@ nav.theme-dark {
     font-size: 0.75rem;
   }
 }
+
+/* Specific override for the Archive links to ensure Periwinkle color */
+.archive-item a.archive-link {
+  color: var(--accent-coder) !important; /* Force the #b5b9ff variable */
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.archive-item a.archive-link:hover {
+  text-decoration: underline;
+  color: #ffffff !important; /* Switch to white on hover for feedback */
+}
+
+/* Ensure visited links don't turn purple/blue */
+.archive-item a.archive-link:visited {
+  color: var(--accent-coder) !important;
+}
