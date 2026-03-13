@@ -767,3 +767,17 @@ nav.theme-dark {
 .links-wrapper {
   z-index: 2000;
 }
+
+@media (max-width: 768px) {
+  .graph-container {
+    height: 220px;
+  }
+
+  .bar {
+    width: 35px;
+  }
+
+  .bar-label {
+    font-size: 0.75rem;
+  }
+}
