@@ -1,41 +1,62 @@
-/* --- VARIABLES --- */
+/* --- 1. CORE VARIABLES & RESET --- */
 :root {
   --bg-dark: #0f0f0f;
-  --accent-designer: #50fa7b; /* Lime */
-  --accent-coder: #4a9eff; /* Blue */
-  --text-dim: #999;
-}
+  --bg-offset: #050505;
+  --bg-card: #121212;
 
+  /* Primary Branding */
+  --accent-designer: #797b9d; /* We'll use white for Designer accents to keep it clean */
+  --accent-coder: #b5b9ff; /* Your Periwinkle for the Tech side */
+  --accent-neutral: #5c5f99;
+  --text-dim: #71717a;
+  --border: #262626;
+}
 body {
   background-color: var(--bg-dark);
   color: #fff;
+  margin: 0;
+  font-family: "Inter", sans-serif;
 }
 
-/* --- HERO OVERRIDE --- */
+/* --- 2. NAVIGATION & HERO --- */
+nav .container-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+nav .links-wrapper {
+  display: flex;
+  margin-left: auto;
+  gap: 20px;
+  list-style: none;
+}
+
+nav .brand img {
+  height: 60px;
+  width: auto;
+}
+
 .modern-hero {
-  min-height: 70vh !important;
-  display: flex !important;
+  min-height: 70vh;
+  display: flex;
   align-items: center;
 }
 
-.gradient-text {
-  background: linear-gradient(
-    45deg,
-    var(--accent-coder),
-    var(--accent-designer)
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  font-size: 5rem;
+/* --- 2. TYPOGRAPHY (No Gradients) --- */
+h1,
+h2,
+h3 {
+  color: #ffffff !important;
+  margin: 0;
 }
-
-/* --- THE ADHAM SPLIT SECTION --- */
+/* --- 3. SPLIT PERSONALITY SECTION --- */
 .split-personality {
   padding: 100px 0;
-  background: #0a0a0a;
-  border-top: 1px solid #222;
-  border-bottom: 1px solid #222;
+  background: var(--bg-offset);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
 
 .split-container {
@@ -50,20 +71,19 @@ body {
 .personality-side {
   flex: 1;
 }
-
 .designer-list {
   text-align: right;
+  padding-right: 50px;
 }
 .coder-list {
   text-align: left;
+  padding-left: 50px;
 }
 
 .personality-side h3 {
   font-size: 2rem;
   margin-bottom: 20px;
-  font-family: "Inter", sans-serif;
 }
-
 .text-designer {
   color: var(--accent-designer);
 }
@@ -76,192 +96,12 @@ body {
   padding: 0;
   font-family: "JetBrains Mono", monospace;
   line-height: 2.2;
-  color: var(--text-dim);
-}
-
-/* --- THE PIE CHART --- */
-.personality-core {
-  width: 320px;
-  position: relative;
-}
-
-.pie-chart-wrapper {
-  position: relative;
-  width: 100%;
-}
-
-.pie-chart {
-  transform: rotate(-90deg);
-  border-radius: 50%;
-}
-
-.pie-segment {
-  fill: none;
-  stroke-width: 10; /* Thickness of the ring */
-}
-
-.designer-segment {
-  stroke: var(--accent-designer);
-  stroke-dasharray: 125 251; /* Roughly 50% of the circumference */
-}
-
-.coder-segment {
-  stroke: var(--accent-coder);
-  stroke-dasharray: 125 251;
-  stroke-dashoffset: -125; /* Offset to start where designer ends */
-}
-
-.pie-center-image {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 4px solid #222;
-}
-
-.pie-center-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* --- SKILL BARS --- */
-.skill-title {
-  border-bottom: 1px solid #333;
-  padding-bottom: 10px;
-  margin-bottom: 20px;
-}
-.designer-title {
-  color: var(--accent-designer);
-}
-.coder-title {
-  color: var(--accent-coder);
-}
-
-.progress-bar-wrap {
-  background: #222;
-  height: 8px;
-  border-radius: 4px;
-  margin-top: 8px;
-}
-
-.progress-fill {
-  height: 100%;
-  border-radius: 4px;
-}
-.fill-designer {
-  background: var(--accent-designer);
-}
-.fill-coder {
-  background: var(--accent-coder);
-}
-
-/* --- RESPONSIVE --- */
-@media (max-width: 900px) {
-  .split-container {
-    flex-direction: column;
-    text-align: center;
-  }
-  .designer-list,
-  .coder-list {
-    text-align: center;
-    order: 2;
-  }
-  .personality-core {
-    order: 1;
-    margin-bottom: 40px;
-  }
-  .flex-cols-2 {
-    grid-template-columns: 1fr !important;
-  }
-}
-
-/* --- THE INVERSED 70/30 PIE --- */
-
-:root {
-  --accent-designer: #4a9eff; /* Blue for Designer */
-  --accent-coder: #50fa7b; /* Green for Coder */
-}
-
-.personality-core {
-  width: 320px;
-  height: 320px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.pie-chart-wrapper {
-  width: 100%;
-  height: 100%;
-  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5));
-  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.pie-chart {
-  width: 100%;
-  height: 100%;
-  /* Rotated so the Blue slice sits on the left (Designer side) */
-  transform: rotate(145deg);
-  border-radius: 50%;
-}
-
-/* Base layer: The Coder (Green - 70%) */
-.pie-base {
-  fill: var(--accent-coder);
-}
-
-/* Top layer: The Designer (Blue - 30%) */
-/* Circumference ~314. 30% = 94.2 */
-.designer-slice {
-  fill: transparent;
-  stroke: var(--accent-designer);
-  stroke-width: 100; /* Solid center */
-  stroke-dasharray: 0 314;
-  animation: fillPie 1.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-}
-
-@keyframes fillPie {
-  to {
-    stroke-dasharray: 94.2 314;
-  }
-}
-
-/* Hover Effect */
-.pie-chart-wrapper:hover {
-  transform: scale(1.05) rotate(5deg);
-}
-
-/* Alignment with Sidebars */
-.designer-list h3 span {
-  color: var(--accent-designer);
-}
-.coder-list h3 span {
-  color: var(--accent-coder);
-}
-
-.designer-list {
-  text-align: right;
-  padding-right: 50px;
-}
-
-.coder-list {
-  text-align: left;
-  padding-left: 50px;
 }
 
 .cringe-list li {
-  font-family: "JetBrains Mono", monospace;
   color: #777;
   font-size: 0.95rem;
-  margin-bottom: 10px;
 }
-
-/* Matching the dots to the new colors */
 .designer-list .cringe-list li::after {
   content: " •";
   color: var(--accent-designer);
@@ -271,422 +111,114 @@ body {
   color: var(--accent-coder);
 }
 
-/* --- NAVIGATION ALIGNMENT FIX --- */
-nav .container-menu {
-  display: flex !important;
-  justify-content: space-between !important;
-  align-items: center !important;
+/* PIE CHART */
+.personality-core {
+  width: 320px;
+  height: 320px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.pie-chart-wrapper {
   width: 100%;
-}
-
-nav .links-wrapper {
-  display: flex !important;
-  margin-left: auto !important; /* Pushes the list to the right */
-  gap: 20px; /* Adjust spacing between links */
-  list-style: none;
-}
-
-/* Ensure the logo doesn't grow too large and cramp the nav */
-nav .brand img {
-  height: 60px;
-  width: auto;
-}
-
-/* --- FOOTER CENTER FIX & THEME --- */
-footer.theme-dark {
-  background-color: #0a0a0a !important;
-  border-top: 1px solid #222;
-  padding: 80px 20px;
-  text-align: center !important;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-footer .footer-links,
-footer .footer-icons {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  list-style: none;
-  padding: 0;
-  margin: 20px 0;
-}
-
-footer .footer-icons i {
-  font-size: 1.5rem;
-  transition: color 0.3s;
-}
-
-footer .footer-icons a:hover i {
-  color: var(--accent-coder);
-}
-
-/* --- RANDOM FACTS GRID --- */
-.facts-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  margin-top: 40px;
-}
-
-.fact-card {
-  background: #161616;
-  border: 1px solid #222;
-  padding: 30px;
-  border-radius: 12px;
-  transition: transform 0.3s;
-}
-
-.fact-card:hover {
-  transform: translateY(-5px);
-  border-color: var(--accent-coder);
-}
-/* --- FIXED COLUMN SKILLS GRAPH --- */
-
-.graph-container {
-  display: flex;
-  align-items: flex-end; /* Keeps bars on the floor */
-  justify-content: space-around;
-  height: 300px;
-  border-bottom: 2px solid #333;
-  padding: 0 20px;
-  margin-top: 50px;
-}
-
-.column-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end; /* Ensures bars grow from bottom */
   height: 100%;
-  flex: 1;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-/* --- VARIABLES --- */
-:root {
-  --bg-dark: #0f0f0f;
-  --accent-designer: #50fa7b; /* Lime */
-  --accent-coder: #4a9eff; /* Blue */
-  --text-dim: #999;
+.pie-chart {
+  transform: rotate(145deg);
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
 }
-
-body {
-  background-color: var(--bg-dark);
-  color: #fff;
+.pie-base {
+  fill: var(--accent-coder);
 }
-
-/* --- HERO OVERRIDE --- */
-.modern-hero {
-  min-height: 70vh !important;
-  display: flex !important;
-  align-items: center;
+.designer-slice {
+  fill: transparent;
+  stroke: var(--accent-designer);
+  stroke-width: 100;
+  stroke-dasharray: 0 314;
+  animation: fillPie 1.8s ease forwards;
 }
 
-.gradient-text {
-  background: linear-gradient(
-    45deg,
-    var(--accent-coder),
-    var(--accent-designer)
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  font-size: 5rem;
+@keyframes fillPie {
+  to {
+    stroke-dasharray: 94.2 314;
+  }
+}
+.pie-chart-wrapper:hover {
+  transform: scale(1.05) rotate(5deg);
 }
 
-/* --- THE ADHAM SPLIT SECTION --- */
-.split-personality {
-  padding: 100px 0;
-  background: #0a0a0a;
-  border-top: 1px solid #222;
-  border-bottom: 1px solid #222;
+/* --- 4. PORTFOLIO CTA (The replacement) --- */
+.portfolio-cta {
+  padding: 120px 0;
+  background: radial-gradient(circle at top right, #1a1a1a, var(--bg-dark));
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
 }
 
-.split-container {
+.container-cta {
   max-width: 1100px;
   margin: 0 auto;
+  padding: 0 20px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 20px;
+  gap: 60px;
 }
 
-.personality-side {
-  flex: 1;
-}
-
-.designer-list {
-  text-align: right;
-}
-.coder-list {
-  text-align: left;
-}
-
-.personality-side h3 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  font-family: "Inter", sans-serif;
-}
-
-.text-designer {
-  color: var(--accent-designer);
-}
-.text-coder {
+.cta-tag {
+  font-family: "JetBrains Mono";
   color: var(--accent-coder);
+  display: block;
+  margin-bottom: 15px;
 }
-
-.cringe-list {
-  list-style: none;
-  padding: 0;
-  font-family: "JetBrains Mono", monospace;
-  line-height: 2.2;
+.cta-title {
+  font-size: 3rem;
+  line-height: 1.1;
+  margin-bottom: 25px;
+}
+.cta-description {
   color: var(--text-dim);
+  font-size: 1.1rem;
+  max-width: 500px;
+  margin-bottom: 40px;
 }
 
-/* --- THE PIE CHART --- */
-.personality-core {
-  width: 320px;
-  position: relative;
-}
-
-.pie-chart-wrapper {
-  position: relative;
-  width: 100%;
-}
-
-.pie-chart {
-  transform: rotate(-90deg);
-  border-radius: 50%;
-}
-
-.pie-segment {
-  fill: none;
-  stroke-width: 10; /* Thickness of the ring */
-}
-
-.designer-segment {
-  stroke: var(--accent-designer);
-  stroke-dasharray: 125 251; /* Roughly 50% of the circumference */
-}
-
-.coder-segment {
-  stroke: var(--accent-coder);
-  stroke-dasharray: 125 251;
-  stroke-dashoffset: -125; /* Offset to start where designer ends */
-}
-
-.pie-center-image {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 4px solid #222;
-}
-
-.pie-center-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* --- SKILL BARS --- */
-.skill-title {
-  border-bottom: 1px solid #333;
-  padding-bottom: 10px;
-  margin-bottom: 20px;
-}
-.designer-title {
-  color: var(--accent-designer);
-}
-.coder-title {
-  color: var(--accent-coder);
-}
-
-.progress-bar-wrap {
-  background: #222;
-  height: 8px;
-  border-radius: 4px;
-  margin-top: 8px;
-}
-
-.progress-fill {
-  height: 100%;
-  border-radius: 4px;
-}
-.fill-designer {
-  background: var(--accent-designer);
-}
-.fill-coder {
-  background: var(--accent-coder);
-}
-
-/* --- RESPONSIVE --- */
-@media (max-width: 900px) {
-  .split-container {
-    flex-direction: column;
-    text-align: center;
-  }
-  .designer-list,
-  .coder-list {
-    text-align: center;
-    order: 2;
-  }
-  .personality-core {
-    order: 1;
-    margin-bottom: 40px;
-  }
-  .flex-cols-2 {
-    grid-template-columns: 1fr !important;
-  }
-}
-
-/* --- THE INVERSED 70/30 PIE --- */
-
-:root {
-  --accent-designer: #4a9eff; /* Blue for Designer */
-  --accent-coder: #50fa7b; /* Green for Coder */
-}
-
-.personality-core {
-  width: 320px;
-  height: 320px;
-  display: flex;
+.portfolio-link {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
+  gap: 15px;
+  text-decoration: none;
+  color: #fff;
+  font-family: "JetBrains Mono";
+  font-weight: 700;
+  transition: gap 0.3s;
 }
 
-.pie-chart-wrapper {
-  width: 100%;
-  height: 100%;
-  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5));
-  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+.portfolio-link:hover {
+  gap: 25px;
 }
 
-.pie-chart {
-  width: 100%;
-  height: 100%;
-  /* Rotated so the Blue slice sits on the left (Designer side) */
-  transform: rotate(145deg);
-  border-radius: 50%;
+.floating-code-box {
+  background: var(--bg-card);
+  padding: 30px;
+  border-left: 4px solid var(--accent-coder);
+  border-radius: 8px;
+  font-family: "JetBrains Mono";
+  animation: float 4s ease-in-out infinite;
 }
 
-/* Base layer: The Coder (Green - 70%) */
-.pie-base {
-  fill: var(--accent-coder);
-}
-
-/* Top layer: The Designer (Blue - 30%) */
-/* Circumference ~314. 30% = 94.2 */
-.designer-slice {
-  fill: transparent;
-  stroke: var(--accent-designer);
-  stroke-width: 100; /* Solid center */
-  stroke-dasharray: 0 314;
-  animation: fillPie 1.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-}
-
-@keyframes fillPie {
-  to {
-    stroke-dasharray: 94.2 314;
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
   }
 }
 
-/* Hover Effect */
-.pie-chart-wrapper:hover {
-  transform: scale(1.05) rotate(5deg);
-}
-
-/* Alignment with Sidebars */
-.designer-list h3 span {
-  color: var(--accent-designer);
-}
-.coder-list h3 span {
-  color: var(--accent-coder);
-}
-
-.designer-list {
-  text-align: right;
-  padding-right: 50px;
-}
-
-.coder-list {
-  text-align: left;
-  padding-left: 50px;
-}
-
-.cringe-list li {
-  font-family: "JetBrains Mono", monospace;
-  color: #777;
-  font-size: 0.95rem;
-  margin-bottom: 10px;
-}
-
-/* Matching the dots to the new colors */
-.designer-list .cringe-list li::after {
-  content: " •";
-  color: var(--accent-designer);
-}
-.coder-list .cringe-list li::before {
-  content: "• ";
-  color: var(--accent-coder);
-}
-
-/* --- NAVIGATION ALIGNMENT FIX --- */
-nav .container-menu {
-  display: flex !important;
-  justify-content: space-between !important;
-  align-items: center !important;
-  width: 100%;
-}
-
-nav .links-wrapper {
-  display: flex !important;
-  margin-left: auto !important; /* Pushes the list to the right */
-  gap: 20px; /* Adjust spacing between links */
-  list-style: none;
-}
-
-/* Ensure the logo doesn't grow too large and cramp the nav */
-nav .brand img {
-  height: 60px;
-  width: auto;
-}
-
-/* --- FOOTER CENTER FIX & THEME --- */
-footer.theme-dark {
-  background-color: #0a0a0a !important;
-  border-top: 1px solid #222;
-  padding: 80px 20px;
-  text-align: center !important;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-footer .footer-links,
-footer .footer-icons {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  list-style: none;
-  padding: 0;
-  margin: 20px 0;
-}
-
-footer .footer-icons i {
-  font-size: 1.5rem;
-  transition: color 0.3s;
-}
-
-footer .footer-icons a:hover i {
-  color: var(--accent-coder);
-}
-
-/* --- RANDOM FACTS GRID --- */
 .facts-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -695,35 +227,55 @@ footer .footer-icons a:hover i {
 }
 
 .fact-card {
-  background: #161616;
-  border: 1px solid #222;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
   padding: 30px;
   border-radius: 12px;
-  transition: transform 0.3s;
+  transition:
+    transform 0.3s,
+    border-color 0.3s;
 }
 
 .fact-card:hover {
   transform: translateY(-5px);
   border-color: var(--accent-coder);
 }
+.fact-card i {
+  color: var(--accent-coder);
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+/* --- 5. SKILLS GRAPH & FACTS --- */
 /* --- FIXED COLUMN SKILLS GRAPH --- */
 
 .graph-container {
   display: flex;
+
   align-items: flex-end; /* Keeps bars on the floor */
+
   justify-content: space-around;
+
   height: 300px;
+
   border-bottom: 2px solid #333;
+
   padding: 0 20px;
+
   margin-top: 50px;
 }
 
 .column-wrapper {
   display: flex;
+
   flex-direction: column;
+
   align-items: center;
+
   justify-content: flex-end; /* Ensures bars grow from bottom */
+
   height: 100%;
+
   flex: 1;
 }
 
@@ -731,76 +283,106 @@ footer .footer-icons a:hover i {
 
 .bar {
   width: 50px;
+
   border-radius: 4px 4px 0 0;
+
   position: relative;
+
   display: block !important;
+
   transform: scaleY(0); /* Start hidden */
+
   transform-origin: bottom;
+
   animation: growUp 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+
   transition: all 0.3s ease;
+
   transform-origin: bottom;
+
   transform: scaleY(0); /* Start with bars hidden */
 }
+
 /* Individual Flat Colors */
+
 .bar.color-1 {
   background-color: #50fa7b;
 }
+
 .bar.color-2 {
   background-color: #8be9fd;
 }
+
 .bar.color-3 {
   background-color: #bd93f9;
 }
+
 .bar.color-4 {
   background-color: #ff79c6;
 }
+
 .bar.color-5 {
   background-color: #4a9eff;
 }
 
 /* Ladder Effect Delays */
+
 .column-wrapper:nth-child(1) .bar {
   animation-delay: 0.3s;
 }
+
 .column-wrapper:nth-child(2) .bar {
   animation-delay: 0.4s;
 }
+
 .column-wrapper:nth-child(3) .bar {
   animation-delay: 0.5s;
 }
+
 .column-wrapper:nth-child(4) .bar {
   animation-delay: 0.6s;
 }
+
 .column-wrapper:nth-child(5) .bar {
   animation-delay: 0.7s;
 }
 
 /* --- DYNAMIC HOVER --- */
+
 .bar:hover {
   filter: brightness(1.2);
+
   cursor: crosshair;
+
   /* Keep the scaleY(1) from the animation but add a tiny bump */
+
   transform: scaleY(1.03);
 }
 
 /* Individual Glows */
+
 .bar.color-1:hover {
   box-shadow: 0 0 20px rgba(80, 250, 123, 0.6);
 }
+
 .bar.color-2:hover {
   box-shadow: 0 0 20px rgba(139, 233, 253, 0.6);
 }
+
 .bar.color-3:hover {
   box-shadow: 0 0 20px rgba(189, 147, 249, 0.6);
 }
+
 .bar.color-4:hover {
   box-shadow: 0 0 20px rgba(255, 121, 198, 0.6);
 }
+
 .bar.color-5:hover {
   box-shadow: 0 0 20px rgba(74, 158, 255, 0.6);
 }
 
 /* Animation Keyframes */
+
 @keyframes growUp {
   to {
     transform: scaleY(1);
@@ -809,30 +391,46 @@ footer .footer-icons a:hover i {
 
 .bar-label {
   margin-top: 20px;
+
   /* Force the developer font */
+
   font-family: "JetBrains Mono", monospace !important;
+
   font-weight: 500;
+
   font-size: 0.85rem;
+
   /* Dim the color to match the "comment" aesthetic */
+
   color: #888;
+
   white-space: nowrap;
+
   opacity: 0;
+
   letter-spacing: -0.5px;
+
   animation: fadeIn 2s ease forwards;
+
   transition: color 0.3s ease;
 }
+
 mn-wrapper:nth-child(1) .bar-label {
   animation-delay: 0.4s;
 }
+
 .column-wrapper:nth-child(2) .bar-label {
   animation-delay: 0.5s;
 }
+
 .column-wrapper:nth-child(3) .bar-label {
   animation-delay: 0.6s;
 }
+
 .column-wrapper:nth-child(4) .bar-label {
   animation-delay: 0.7s;
 }
+
 .column-wrapper:nth-child(5) .bar-label {
   animation-delay: 0.8s;
 }
@@ -842,68 +440,194 @@ mn-wrapper:nth-child(1) .bar-label {
     opacity: 1;
   }
 }
+/* --- 6. FOOTER (FRAMEWORK OVERRIDE) --- */
+footer.theme-dark {
+  background-color: var(--bg-offset) !important;
+  border-top: 1px solid var(--border);
+  padding: 80px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-/* --- MOBILE RESPONSIVENESS (PHONES) --- */
+/* Icons Fix */
+footer.theme-dark .footer-icons li a,
+footer.theme-dark .footer-icons li a i {
+  color: var(--accent-coder) !important;
+  font-size: 1.8rem !important;
+  text-decoration: none !important;
+  transition: all 0.3s ease;
+  opacity: 1 !important;
+}
 
+footer.theme-dark .footer-icons li a:hover i {
+  color: #ffffff !important;
+  transform: translateY(-5px);
+}
+
+/* Privacy Link Fix - MOVED OUTSIDE MEDIA QUERY */
+footer.theme-dark .privacy,
+footer.theme-dark .privacy a {
+  color: var(--text-dim) !important;
+  text-decoration: none !important;
+  font-size: 0.85rem !important;
+  margin-top: 20px;
+  display: block;
+}
+
+footer.theme-dark .privacy a:hover {
+  color: var(--accent-coder) !important;
+  text-decoration: underline !important;
+}
+
+/* Nav Button Fix - MOVED OUTSIDE MEDIA QUERY */
+nav.theme-dark .links-wrapper #btn-cta,
+nav.theme-dark .links-wrapper a#btn-cta.btn {
+  background-color: var(--accent-coder) !important;
+  color: var(--bg-dark) !important;
+  border: none !important;
+  padding: 10px 22px !important;
+  border-radius: 4px !important;
+  font-weight: 700 !important;
+  opacity: 1 !important;
+  display: flex !important;
+  align-items: center;
+  gap: 8px;
+}
+
+nav.theme-dark .links-wrapper #btn-cta:hover {
+  background-color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(181, 185, 255, 0.4);
+}
+
+/* --- 7. MOBILE RESPONSIVENESS (PHONES ONLY) --- */
 @media (max-width: 768px) {
-  /* 1. Stack the Split Personality Section */
-  .split-container {
-    flex-direction: column !important;
-    gap: 50px;
-    padding: 0 20px;
+  .split-container,
+  .container-cta {
+    flex-direction: column;
+    text-align: center;
   }
 
-  /* 2. Fix the Lists (Remove right/left alignment) */
   .designer-list,
   .coder-list {
-    text-align: center !important;
-    padding: 0 !important;
-    width: 100%;
+    padding: 0;
+    text-align: center;
   }
 
-  .designer-list h3,
-  .coder-list h3 {
-    font-size: 1.8rem;
+  .gradient-text {
+    font-size: 3rem;
   }
 
-  .cringe-list {
-    display: inline-block; /* Keeps the list centered but left-aligned text */
-    text-align: left;
-    margin: 0 auto;
-  }
-
-  /* 3. Scale down the Pie Chart for small screens */
+  .cta-visual-decoration,
   .personality-core {
-    width: 260px;
-    height: 260px;
-    order: -1; /* Puts the Pie Chart at the TOP of the stack */
-    margin-bottom: 20px;
-  }
-
-  /* 4. The Skills Graph (Crucial Fix) */
-  .graph-container {
-    height: 250px; /* Shorter for mobile */
-    gap: 10px; /* Tighter spacing */
-    padding: 0 10px;
+    order: -1;
+    margin-bottom: 30px;
   }
 
   .bar {
-    width: 35px; /* Thinner bars so they all fit */
+    width: 30px;
   }
-
   .bar-label {
-    font-size: 0.7rem; /* Tiny text to prevent overlapping */
-    transform: rotate(-45deg); /* Rotate labels so they don't collide */
-    margin-top: 25px;
+    font-size: 0.7rem;
+    transform: rotate(-45deg);
     transform-origin: top left;
   }
+}
 
-  /* 5. Adjust Hero Text */
-  .gradient-text {
-    font-size: 3rem !important; /* Prevents name from breaking lines weirdly */
-  }
+/* --- CONTACT PAGE OVERRIDES (GLOBAL) --- */
+.contact-subtext {
+  font-size: 1.25rem !important;
+  line-height: 1.6 !important;
+  max-width: 700px;
+  margin: 20px auto 0 !important;
+  color: var(--text-dim) !important;
+  font-weight: 400 !important;
+}
 
-  .modern-hero h2 {
-    font-size: 1.2rem;
-  }
+#email-form {
+  background: var(--bg-card) !important;
+  padding: 40px;
+  border-radius: 8px;
+  border: 1px solid var(--border) !important;
+}
+
+#email-form label {
+  font-family: "JetBrains Mono", monospace;
+  color: var(--accent-coder);
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  display: block;
+}
+
+#email-form input,
+#email-form textarea {
+  background-color: var(--bg-dark) !important;
+  border: 1px solid var(--border) !important;
+  color: #ffffff !important;
+  padding: 12px !important;
+  border-radius: 4px !important;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#btn-submit {
+  background-color: var(--accent-coder) !important;
+  color: var(--bg-dark) !important;
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 700;
+  padding: 15px 30px !important;
+  border: none !important;
+}
+
+/* --- UNIFIED PERIWINKLE SKILL BARS --- */
+.bar.color-1,
+.bar.color-2,
+.bar.color-3,
+.bar.color-4,
+.bar.color-5 {
+  background-color: var(--accent-coder) !important;
+}
+.bar.color-1 {
+  opacity: 1;
+}
+.bar.color-2 {
+  opacity: 0.9;
+}
+.bar.color-3 {
+  opacity: 0.8;
+}
+.bar.color-4 {
+  opacity: 0.7;
+}
+.bar.color-5 {
+  opacity: 0.6;
+}
+
+/* --- HEADER ALIGNMENT --- */
+header.theme-dark {
+  text-align: center !important; /* Centers the H1 and the container */
+  padding: 100px 0 60px !important;
+}
+
+.container-text {
+  margin: 0 auto !important; /* Ensures the wrapper itself is centered */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* --- THE STUBBORN LINK FIX --- */
+.contact-subtext a,
+.contact-subtext a:visited,
+header.theme-dark h2 a {
+  color: var(--accent-coder) !important; /* Force Periwinkle */
+  text-decoration: underline dotted !important;
+  transition: color 0.3s ease;
+}
+
+.contact-subtext a:hover {
+  color: #ffffff !important;
+  text-decoration: underline solid !important;
 }
