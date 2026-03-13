@@ -288,8 +288,6 @@ h3 {
 
   position: relative;
 
-  display: block !important;
-
   transform: scaleY(0); /* Start hidden */
 
   transform-origin: bottom;
@@ -722,7 +720,7 @@ header.theme-dark h2 a {
   }
 
   .nav-toggle {
-    display: block;
+    display: block !important;
     cursor: pointer;
   }
 }
@@ -732,18 +730,6 @@ header.theme-dark h2 a {
 }
 
 /* Force the hamburger to be visible */
-.nav-toggle {
-  display: block !important;
-  cursor: pointer;
-}
-
-.nav-toggle div {
-  width: 25px;
-  height: 3px;
-  background-color: #fff;
-  margin: 5px;
-  transition: 0.3s;
-}
 
 /* Animation for the X shape when menu is open */
 .nav-toggle.open .bar-1 {
@@ -758,6 +744,7 @@ header.theme-dark h2 a {
 
 /* Hide hamburger on desktop */
 .nav-toggle {
+  display: none;
   margin-left: auto;
   z-index: 1100;
 }
