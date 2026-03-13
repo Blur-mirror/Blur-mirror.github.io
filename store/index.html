@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -34,49 +34,6 @@
       referrerpolicy="no-referrer"
     />
 
-    <style>
-      /* sets a fixed height on the book images */
-      .col-4 img {
-        max-height: 300px;
-        width: auto;
-      }
-
-      /* sets a specal fixed height for tablet screens */
-      @media (min-width: 786px) and (max-width: 1024px) {
-        .col-4 img {
-          max-height: 200px;
-          width: auto;
-        }
-      }
-
-      /* Amazon-style buttons */
-      .section-selector-1 a.btn:link,
-      .section-selector-1 a.btn:visited {
-        background-color: var(--yellow-400);
-      }
-
-      .section-selector-1 a.btn:link,
-      .section-selector-1 a.btn:visited {
-        color: var(--blue-800);
-      }
-
-      .section-selector-1 a.btn:link,
-      .section-selector-1 a.btn:visited {
-        border-color: var(--yellow-400);
-      }
-
-      .section-selector-1 a.btn:focus,
-      .section-selector-1 a.btn:hover,
-      .section-selector-1 a.btn:active {
-        background-color: var(--yellow-500);
-      }
-
-      .section-selector-1 a.btn:focus,
-      .section-selector-1 a.btn:hover,
-      .section-selector-1 a.btn:active {
-        border-color: var(--yellow-500);
-      }
-    </style>
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -101,33 +58,24 @@
     <!-- navbar start here -->
     <nav class="theme-dark">
       <div class="container-menu">
-        <a href="../index.html" class="brand">
-          <img src="../assets/img/logo.png" alt="Sample website logo"
+        <a href="../index.html" class="brand"
+          ><img src="../assets/img/hito logo.png" alt="Logo"
         /></a>
-
-        <div class="container-menu-links">
-          <div class="nav-toggle" id="nav-toggle-btn">
-            <div class="bar-1"></div>
-            <div class="bar-2"></div>
-            <div class="bar-3"></div>
-          </div>
-          <ul class="links-wrapper">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../portfolio/index.html">Portfolio</a></li>
-            <li><a href="#">Store</a></li>
-            <li><a href="../privacy.html">Privacy</a></li>
-            <li>
-              <a
-                class="btn btn-solid btn-soft"
-                id="btn-cta"
-                href="../contact/index.html"
-                ><span>Contact</span> <i class="fa-regular fa-envelope"></i
-              ></a>
-            </li>
-          </ul>
-        </div>
+        <ul class="links-wrapper">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../portfolio/index.html">Portfolio</a></li>
+          <li>
+            <a
+              class="btn btn-solid btn-soft"
+              id="btn-cta"
+              href="../contact/index.html"
+              ><span>Contact</span> <i class="fa-regular fa-envelope"></i
+            ></a>
+          </li>
+        </ul>
       </div>
     </nav>
+
     <!-- navbar ends here -->
 
     <!-- header starts here -->
@@ -229,36 +177,18 @@
 
     <!-- footer -->
 
-    <footer class="theme-dark text-center-desktop text-center-mobile">
+    <footer class="theme-dark">
       <h2>Antonio Cruel</h2>
-
-      <h3>Front-end designer and developer</h3>
-
-      <ul class="footer-links">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../portfolio/index.html">Portfolio</a></li>
-        <li><a href="#">Store</a></li>
-        <li><a href="../contact/index.html">Contact</a></li>
-      </ul>
-
       <ul class="footer-icons">
         <li>
-          <a
-            href="https://www.linkedin.com/in/antonio-c-8b2a29234/"
-            target="_blank"
-            ><i class="fab fa-linkedin"></i
-          ></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
         </li>
         <li>
-          <a href="https://github.com/Blur-mirror" target="_blank"
-            ><i class="fab fa-github-square"></i
-          ></a>
+          <a href="#"><i class="fab fa-github"></i></a>
         </li>
       </ul>
-
-      <p class="privacy"><a href="../privacy.html">Privacy &amp; Legal</a></p>
+      <p class="privacy"><a href="../privacy.html">Privacy & Legal</a></p>
     </footer>
-
     <script src="https://lunevedy.com/assets/js/lunevedy.js"></script>
   </body>
 </html>
